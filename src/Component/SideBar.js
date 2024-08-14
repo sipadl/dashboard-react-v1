@@ -22,7 +22,7 @@ const Sidebar = () => {
           <div key={index}>
             <Nav.Item>
               <Nav.Link
-                href={`#${menu.title.toLowerCase()}`}
+                href={menu.items.length > 0 ? 'javascript:void(0)' : `${menu.title.toLowerCase()}`}
                 className="sidebar-link"
                 onClick={() => menu.items.length > 0 && toggleDropdown(menu.title)}
               >
@@ -36,7 +36,7 @@ const Sidebar = () => {
             {menu.items.length > 0 && isOpen[menu.title] && (
               <Nav className="flex-column sub-menu">
                 {menu.items.map((item, idx) => (
-                  <Nav.Link href={`#${item.toLowerCase()}`} key={idx} className="sidebar-sublink">
+                  <Nav.Link href={`${item.toLowerCase().replace(' ','_')}`} key={idx} className="sidebar-sublink">
                     - {item}
                   </Nav.Link>
                 ))}

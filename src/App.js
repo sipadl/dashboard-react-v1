@@ -1,19 +1,23 @@
-
-import {Sidebar, Header } from './Component';
-import Route  from './router'
+import {Header, Sidebar} from './Component';
+import Route from './router'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'boxicons/css/boxicons.min.css';
-
+import './index.css'
 
 function App() {
-  return (
-    <div className="d-flex">
-      <Sidebar />
-      <div className="content p-4" style={{ flexGrow: 1 }}>
-        <Route />
-      </div>
-    </div>
-  );
+    return (
+        <div className="d-flex">
+            <div>
+                <Sidebar/>
+            </div>
+            <div className="content">
+                <Header />
+                <div className='p-3'>
+                <Route/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
