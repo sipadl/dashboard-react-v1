@@ -28,13 +28,13 @@ const dataTable = tableOne;
             </div>
             <div className='d-flex justify-content-between'>
                 <div className='row mt-4'>
-                    <div className='col-md-2 col-xl-2 col-sm-12 col-xs-12'>
+                    <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
                     </div>
-                    <div className='col-md-2 col-xl-2 col-sm-12 col-xs-12'>
+                    <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <SelectOption name={'waktu'} data={['7 Hari Terakhir ', 'Hari Ini', '30 Hari Terakhir']} kelas={'w-100'}/>
                     </div>
-                    <div className='col-md-2 col-xl-2 col-sm-12 col-xs-12'>
+                    <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <SelectOption name={'cabang'} data={['Semua Cabang', 'Jakarta Timur', 'Jakarta Selatan','Jakarta Barat']} kelas={'w-100'}/>
                     </div>
                 </div>
