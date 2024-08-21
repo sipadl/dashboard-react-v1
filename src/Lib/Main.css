@@ -52,3 +52,9 @@
     color: #fff;
   }
   
+  .btn-purple {
+    background-color: rgb(107,78,255) !important;
+    color: white !important;
+    padding: 0.7rem !important;
+    border-radius: 12px !important;
+  }

@@ -10,23 +10,26 @@ export const Menus = [
     }, {
         title: 'Managmenet Perangkat',
         icon: <i style={{color:'black'}} className='bx bxs-devices mx-1' ></i>,
-        items: ['Semua Perangkat', 'QR Soundbox', 'EDC']
-    }, {
-        title: 'Issuer',
+        items: ['Perangkat', 'QR Soundbox', 'EDC']
+    }, 
+    // {
+    //     title: 'Issuer',
+    //     icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
+    //     items: [],
+
+    // }, 
+    // {
+    //     title: 'Acquiring',
+    //     icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
+    //     items: [],
+    // },
+     {
+        title: 'Merchant',
         icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
         items: [],
 
-    }, {
-        title: 'Acquiring',
-        icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
-        items: [],
-
-    }, {
-        title: 'Onboarding',
-        icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
-        items: [],
-
-    }, {
+    }, 
+    {
         title: 'Pengguna & Peran',
         icon: <i style={{color:'black'}} className='bx bx-user-circle mx-1' ></i>,
         items: [],
@@ -128,5 +131,38 @@ export const tableOne = [
         mid:'0000001',
         trackNumber:'081290669170',
         batch:'Batch 1'
+    },
+]
+
+export const dataMerchant = [
+    {
+        images: 'https://placehold.co/50',
+        name: 'BCA',
+        telp: '08131166****',
+        email: 'project@example.co.id',
+        action: [
+            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
+            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
+        ]
+    },
+    {
+        images: 'https://placehold.co/50',
+        name: 'BSI',
+        telp: '08131166****',
+        email: 'project@example.co.id',
+        action: [
+            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
+            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
+        ]
+    },
+    {
+        images: 'https://placehold.co/50',
+        name: 'BRI',
+        telp: '08131166****',
+        email: 'project@example.co.id',
+        action: [
+            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
+            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
+        ]
     },
 ]
