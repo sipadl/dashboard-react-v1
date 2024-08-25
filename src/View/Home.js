@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class Home extends Component {
     render() {
         return (
-            <div>ini Home</div>
+            <div>Dashboard</div>
             // <div>
             //     <Breadcrumb data={'Laporan > Transaksi'}/>
             //     <div className='mt-4'>

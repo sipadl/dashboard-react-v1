@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Devices, Edc, Home, Merchant, Metode, Refund, Settlement, SoundBox, Transaksi} from './View'
+import { Acquiring, BiayaTambahan, Devices, Edc, Home, Issuser, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void} from './View'
+import Issuer from './View/Issuser/Issuser';
 
 export default class Index extends Component {
   render() {
@@ -14,8 +15,14 @@ export default class Index extends Component {
                 <Route path="/settlement" element={<Settlement />} />
                 <Route path="/perangkat" element={<Devices />} />
                 <Route path="/sound_box" element={<SoundBox />} />
-                <Route path="/Edc" element={<Edc />} />
-                <Route path="/Merchant" element={<Merchant />} />
+                <Route path="/edc" element={<Edc />} />
+                <Route path="/issuser" element={<Issuser />} />
+                <Route path="/void" element={<Void />} />
+                <Route path="/acquiring" element={<Acquiring />} />
+                <Route path="/pengguna" element={<Pengguna />} />
+                <Route path="/peran" element={<Peran />} />
+                <Route path="/merchant_discount_rate" element={<MDR />} />
+                <Route path="/biaya_tambahan" element={<BiayaTambahan />} />
 
             </Routes>
         </BrowserRouter>

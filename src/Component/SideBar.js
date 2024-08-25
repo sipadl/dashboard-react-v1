@@ -17,7 +17,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Nav className="flex-column">
-        <div className="sidebar-brand">MyApp</div>
+        <div className="sidebar-brand">
+          <img src="https://placehold.co/50" alt="..." />
+        </div>
         {menuItems.map((menu, index) => (
           <div key={index}>
             <Nav.Item>
@@ -36,7 +38,7 @@ const Sidebar = () => {
             {menu.items.length > 0 && isOpen[menu.title] && (
               <Nav className="flex-column sub-menu">
                 {menu.items.map((item, idx) => (
-                  <Nav.Link href={`${item.toLowerCase().replace(' ','_')}`} key={idx} className="sidebar-sublink">
+                  <Nav.Link href={`${item.toLowerCase().replaceAll(' ','_')}`} key={idx} className="sidebar-sublink">
                     - {item}
                   </Nav.Link>
                 ))}

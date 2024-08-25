@@ -6,10 +6,22 @@ import Settlement from "./Laporan/Setlement";
 import Devices from "./Perangkat/Devices";
 import SoundBox from "./Perangkat/Soundbox";
 import Edc from "./Perangkat/Edc";
-import Merchant from "./Merchant/Merchant";
+import Issuser from "./Issuser/Issuser";
+import Void from "./Laporan/Void";
+import Acquiring from "./Acquiring/Acquiring";
+import Pengguna from "./Pengguna/Pengguna";
+import Peran from "./Pengguna/Peran";
+import MDR from "./Pengaturan/MDR";
+import BiayaTambahan from "./Pengaturan/BiayaTambahan";
 
 export {
-    Merchant,
+    BiayaTambahan,
+    MDR,
+    Peran,
+    Pengguna,
+    Acquiring,
+    Void,
+    Issuser,
     Edc,
     SoundBox,
     Devices,

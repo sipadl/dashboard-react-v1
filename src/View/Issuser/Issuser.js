@@ -2,15 +2,15 @@ import React from 'react'
 import { Breadcrumb, Input, SelectOption, Title, Table, Pagination } from '../../Component'
 import { dataMerchant, tableOne } from '../../Lib/Datas';
 
-export default function Merchant() {
+export default function Issuser() {
 const dataTable = tableOne;
   return (
     <div>
-        <Breadcrumb data={'Merchant'}/>
+        <Breadcrumb data={'Issuser'}/>
         <div className='mt-4'>
             <div className='d-flex justify-content-between'>
                 <div>
-                    <Title data={'Merchant'}/>
+                    <Title data={'Issuer'}/>
                 </div>
                 <div>
                     <button className='btn btn-sm btn-light'> 
