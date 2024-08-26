@@ -1,42 +1,42 @@
 export const Menus = [
     {
         title: 'Dashbor',
-        icon: <i style={{color:'black'}} className='bx bx-home mx-1' ></i>,
+        icon: <i className='bx bx-home mx-1' ></i>,
         items: [],
     }, {
         title: 'Laporan',
-        icon: <i style={{color:'black'}} className='bx bx-bar-chart-alt-2 mx-1'></i>,
+        icon: <i className='bx bx-bar-chart-alt-2 mx-1'></i>,
         items: ['Transaksi', 'Metode Pembayaran','Void' , 'Refund', 'Settlement']
     }, {
         title: 'Managmenet Perangkat',
-        icon: <i style={{color:'black'}} className='bx bxs-devices mx-1' ></i>,
+        icon: <i className='bx bxs-devices mx-1' ></i>,
         items: ['Perangkat', 'QR Soundbox', 'EDC']
     }, 
     {
         title: 'Issuser',
-        icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
+        icon: <i className='bx bx-store mx-1' ></i>,
         items: [],
 
     }, 
     {
         title: 'Acquiring',
-        icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
+        icon: <i className='bx bx-store mx-1' ></i>,
         items: [],
     },
     //  {
     //     title: 'Merchant',
-    //     icon: <i style={{color:'black'}} className='bx bx-store mx-1' ></i>,
+    //     icon: <i className='bx bx-store mx-1' ></i>,
     //     items: [],
 
     // }, 
     {
         title: 'Pengguna & Peran',
-        icon: <i style={{color:'black'}} className='bx bx-user-circle mx-1' ></i>,
+        icon: <i className='bx bx-user-circle mx-1' ></i>,
         items: ['Pengguna', 'Peran' ],
 
     }, {
         title: 'Pengaturan',
-        icon: <i style={{color:'black'}} className='bx bx-cog mx-1' ></i>,
+        icon: <i className='bx bx-cog mx-1' ></i>,
         items: ['Merchant Discount Rate', 'Biaya Tambahan']
     }
 ]
