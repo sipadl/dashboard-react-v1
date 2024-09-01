@@ -5,8 +5,9 @@ import 'boxicons/css/boxicons.min.css';
 import './index.css'
 
 function App() {
-    return (
-        <div className="d-flex">
+    if(window.location.href == '') {
+        return (
+            <div className="d-flex">
             <div>
                 <Sidebar/>
             </div>
@@ -18,6 +19,11 @@ function App() {
             </div>
         </div>
     );
+    } else {
+        return (
+            <Route />
+        )
+    }
 }
 
 export default App;

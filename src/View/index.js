@@ -13,8 +13,16 @@ import Pengguna from "./Pengguna/Pengguna";
 import Peran from "./Pengguna/Peran";
 import MDR from "./Pengaturan/MDR";
 import BiayaTambahan from "./Pengaturan/BiayaTambahan";
+import Login from "./Login/Login";
+import Daftar from "./Login/Daftar";
+import LupaPassword from "./Login/LupaPassword";
+import UbahKataSandi from "./Login/UbahKataSandi";
 
 export {
+    UbahKataSandi,
+    LupaPassword,
+    Daftar,
+    Login,
     BiayaTambahan,
     MDR,
     Peran,

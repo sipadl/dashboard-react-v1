@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Input({data, placeholder, kelas}) {
+export default function Input({data, placeholder, kelas, tipe}) {
   return (
-    <input type='text' name={data} placeholder={placeholder} className={`form-control ${kelas}`} />
+    <div>
+    <input type={tipe ? tipe : 'text'} name={data} placeholder={placeholder} className={`form-control ${kelas}`} />
+    </div>
   )
 }
