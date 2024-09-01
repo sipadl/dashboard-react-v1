@@ -8,7 +8,7 @@ export default class Refund extends Component {
         const dataTable = tableOne;
         return (
             <div>
-                <Breadcrumb data={'Laporan > Refund'}/>
+                <Breadcrumb before={'Laporan'} after={'Refund'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

@@ -5,7 +5,11 @@ import 'boxicons/css/boxicons.min.css';
 import './index.css'
 
 function App() {
-    if(window.location.href == '') {
+    if(window.location.pathname != '/' &&
+        window.location.pathname != '/login' &&
+        window.location.pathname != '/daftar' &&
+        window.location.pathname != '/ubah-password' &&
+        window.location.pathname != '/lupa-password') {
         return (
             <div className="d-flex">
             <div>

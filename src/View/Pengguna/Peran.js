@@ -7,7 +7,7 @@ export default class Peran extends Component {
     render() {
         return (
             <div>
-                <Breadcrumb data={'Peran & Peran > Peran'}/>
+                <Breadcrumb after ={'Peran'} before={'Pengguna & Peran'} />
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

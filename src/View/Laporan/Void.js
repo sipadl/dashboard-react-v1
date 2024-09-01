@@ -8,7 +8,7 @@ export default class Void extends Component {
         const dataTable = tableOne;
         return (
             <div>
-                <Breadcrumb data={'Laporan > Void'}/>
+                <Breadcrumb before={'Laporan'} after={'Void'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

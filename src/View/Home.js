@@ -1,59 +1,88 @@
 import React, {Component} from 'react'
+import { Breadcrumb, Chart, ChartCircle, PieChart, SelectOption, Title } from '../Component'
+import ico from '../assets/Icon.svg'
 
 export default class Home extends Component {
     render() {
         return (
-            <div>Dashboard</div>
-            // <div>
-            //     <Breadcrumb data={'Laporan > Transaksi'}/>
-            //     <div className='mt-4'>
-            //         <div className='d-flex justify-content-between'>
-            //             <div>
-            //                 <Title data={'Transaksi'}/>
-            //             </div>
-            //             <div>
-            //                 <Button>Export</Button>
-            //             </div>
-            //         </div>
-            //     </div>
-            //     <div className='w-auto mt-4'>
-            //     <SelectOption name={'merchant'} data={['Kopi Kenangan', 'Janji Jiwa']} kelas={'w-auto'}/>
-            //     </div>
-            //     <div className='inputan mt-2 row'>
-            //         <div className='col-2'>
-            //             <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
-            //         </div>
-            //         <div className='col-2'>
-            //             <SelectOption
-            //                 name={'cari'}
-            //                 data={['7 Hari Terakhir', 'Hari Ini']}
-            //                 kelas={'mx-2'}/>
-            //         </div>
-            //         <div className='col-2'>
-            //             <SelectOption
-            //                 name={'cari'}
-            //                 data={['Semua Cabang', 'Cabang 1', 'Cabang 2']}
-            //                 kelas={'mx-2'}/>
-            //         </div>
-            //         <div className='col-2'>
-            //             <SelectOption
-            //                 name={'cari'}
-            //                 data={['Semua Metode Bayar', 'Bank Transfer']}
-            //                 kelas={'mx-2'}/>
-            //         </div>
-            //     </div>
-            //     <div className='p-0 mt-3'>
-            //         <Table data={dataTable}/>
-            //     </div>
-            //     <div className='mt-2'>
-            //     <Pagination
-            //     itemsPerPage={10}
-            //     totalItems={50}
-            //     paginate={5}
-            //     currentPage={2}
-            //     />
-            //     </div>
-            // </div>
+            <div style={{overflowX:'hidden'}}>
+                <Breadcrumb after={"Dashbor"} />
+                <Title kelas={"mt-3"} data={"Dashbor"}/>
+                <div className="row">
+                    <div className="col-md-2">
+                    <SelectOption data={['Kopi Kenangan','Janji Jiwa', 'Indomaret']} kelas={"mt-2"} name={"Merchant"} />
+                    </div>
+                    <div className="col-md-2">
+                    <SelectOption 
+                    data={
+                        ['Hari Ini','7 Hari Terakhir', '30 Hari Terakhir']
+                        } 
+                        kelas={"mt-2"} 
+                        name={"Merchant"} 
+                        />
+                    </div>
+                </div>
+                <div className="row mt-4">
+                    <div className="col-md-4">
+                        <div className="card-dashbord p-3">
+                            <div className="d-flex">
+                                    <div className="">
+                                        <div className="bg-purple-light p-2 fit rounded-circle">
+                                        <div><img src={ico} /></div>
+                                    </div>
+                                </div>
+                                <div className="mx-2 align-self-center">
+                                    <div className="text-dashboard">Total Transaksi</div>
+                                    <div className="number-dashboard">312</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="card-dashbord p-3">
+                            <div className="d-flex">
+                                    <div className="">
+                                        <div className="bg-purple-light p-2 fit rounded-circle">
+                                        <div className="text-rp">Rp</div>
+                                    </div>
+                                </div>
+                                <div className="mx-2 align-self-center">
+                                    <div className="text-dashboard">Total Penjualan</div>
+                                    <div className="number-dashboard">25.000.000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="card-dashbord p-3">
+                        <div className="d-flex">
+                                    <div className="">
+                                        <div className="bg-purple-light p-2 fit rounded-circle">
+                                        <div><img src={ico} /></div>
+                                    </div>
+                                </div>
+                                <div className="mx-2 align-self-center">
+                                    <div className="text-dashboard">Total Penjualan</div>
+                                    <div className="number-dashboard">25.000.000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-6">
+                    <Chart name={"Void"} />
+                    </div>
+                    <div className="col-md-6">
+                    <Chart name={"Refund"} />
+                    </div>
+                    <div className="col-md-6">
+                        <div className="card-dashbord mt-4 p-4">
+                            <PieChart />
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

@@ -8,7 +8,7 @@ export default class Transaksi extends Component {
         const dataTable = tableOne;
         return (
             <div>
-                <Breadcrumb data={'Laporan > Transaksi'}/>
+                <Breadcrumb before={'Laporan'} after={'Transaksi'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

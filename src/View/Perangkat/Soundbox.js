@@ -6,7 +6,7 @@ export default function SoundBox() {
 const dataTable = tableOne;
   return (
     <div>
-        <Breadcrumb data={'Manegement Perangkat > QR Sound Box'}/>
+        <Breadcrumb before={'Manegement Perangkat'} after={'QR Sound Box'}/>
         <div className='mt-4'>
             <div className='d-flex justify-content-between'>
                 <div>

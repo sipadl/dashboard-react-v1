@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void} from './View'
+import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void, UbahKataSandi} from './View'
 
 export default class Index extends Component {
   render() {
@@ -17,7 +17,7 @@ export default class Index extends Component {
                 <Route path="/refund" element={<Refund />} />
                 <Route path="/settlement" element={<Settlement />} />
                 <Route path="/perangkat" element={<Devices />} />
-                <Route path="/sound_box" element={<SoundBox />} />
+                <Route path="/qr_soundbox" element={<SoundBox />} />
                 <Route path="/edc" element={<Edc />} />
                 <Route path="/issuser" element={<Issuser />} />
                 <Route path="/void" element={<Void />} />

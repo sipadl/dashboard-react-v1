@@ -6,7 +6,7 @@ export default function Devices() {
 const dataTable = tableOne;
   return (
     <div>
-        <Breadcrumb data={'Manegement Perangkat > Perangkat'}/>
+        <Breadcrumb before={'Manegement Perangkat'} after={'Perangkat'}/>
         <div className='mt-4'>
             <div className='d-flex justify-content-between'>
                 <div>
@@ -22,19 +22,19 @@ const dataTable = tableOne;
         </div>
         <div className='w-auto mt-4'>
             <div className='row'>
-                <div className='col-md-4 col-sm-12 col-xs-2 col-xs-12'>
+                <div className='col-md-4 col-sm-12 col-xs-4 col-xs-12'>
                 <SelectOption name={'perangkat'} data={['EDC', 'Sound Box']} kelas={'w-100'}/>
                 </div>
             </div>
             <div className='d-flex justify-content-between'>
                 <div className='row mt-4'>
-                    <div className='col-md-4 col-xl-2 col-sm-12 col-xs-12'>
+                    <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
                     </div>
-                    <div className='col-md-4 col-xl-2 col-sm-12 col-xs-12'>
+                    <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <SelectOption name={'waktu'} data={['7 Hari Terakhir ', 'Hari Ini', '30 Hari Terakhir']} kelas={'w-100'}/>
                     </div>
-                    <div className='col-md-4 col-xl-2 col-sm-12 col-xs-12'>
+                    <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <SelectOption name={'cabang'} data={['Semua Cabang', 'Jakarta Timur', 'Jakarta Selatan','Jakarta Barat']} kelas={'w-100'}/>
                     </div>
                 </div>

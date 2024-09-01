@@ -7,7 +7,7 @@ export default class Pengguna extends Component {
     render() {
         return (
             <div>
-                <Breadcrumb data={'Pengguna & Peran > Pengguna'}/>
+                <Breadcrumb before={'Pengguna & Peran'} after={'Pengguna'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

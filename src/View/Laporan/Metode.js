@@ -8,7 +8,7 @@ export default class Metode extends Component {
         const dataTable = tableOne;
         return (
             <div>
-                <Breadcrumb data={'Laporan > Metode Pembayaran'}/>
+                <Breadcrumb before={'Laporan'} after={'Metode Pembayaran'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Title({data}) {
+export default function Title({data, kelas}) {
 
 return (
-    <h2>{data}</h2>
+    <div className={`h2 ${kelas}`}>{data}</div>
   )
 }

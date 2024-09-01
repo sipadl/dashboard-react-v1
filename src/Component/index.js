@@ -8,8 +8,12 @@ import SelectOption from "./SelectOption"
 import Sidebar from "./SideBar"
 import Table from "./Table"
 import Title from "./Title"
+import { Chart } from "./Chart"
+import PieChart from "./PieChart"
 
 export { 
+    PieChart,
+    Chart,
     ImageKiri,
     Placeholder,
     Pagination,

@@ -5,7 +5,7 @@ import {Breadcrumb, Input, Pagination, SelectOption, Table, Title} from '../../C
 export default function MDR() {
   return (
     <div>
-    <Breadcrumb data={'Pengaturan > Merchant Discount Rate (MDR)'}/>
+    <Breadcrumb after={'Merchant Discount Rate (MDR)'} before={'Pengaturan'} />
     <div className='mt-4'>
         <div className='d-flex justify-content-between'>
             <div>

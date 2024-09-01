@@ -7,7 +7,7 @@ export default class Acquiring extends Component {
     render() {
         return (
             <div>
-                <Breadcrumb data={'Acquiring'}/>
+                <Breadcrumb after={'Acquiring'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

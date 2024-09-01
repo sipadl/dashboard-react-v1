@@ -8,7 +8,7 @@ export default class Settlement extends Component {
         const dataTable = tableOne;
         return (
             <div>
-                <Breadcrumb data={'Laporan > Settlement'}/>
+                <Breadcrumb  before={'Laporan'} after={'Settlement'}/>
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

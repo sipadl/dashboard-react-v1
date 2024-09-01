@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
 import { Menus } from '../Lib/Datas';
+import ico from '../assets/autopay.png'
 import '../Lib/Main.css';
 
 const Sidebar = () => {
@@ -18,11 +19,11 @@ const Sidebar = () => {
     <div className="sidebar">
       <Nav className="flex-column">
         <div className="sidebar-brand">
-          <img src="https://placehold.co/50" alt="..." />
+          <img className="w-75" src={ico} alt="..." />
         </div>
         <div className="mx-4">
           <div className="d-flex justify-content-between">
-          <h6>Main Menu</h6>
+          <div className="menu-button">Main Menu</div>
           <i size={30} className='bx bx-chevrons-left mx-1' ></i>
           </div>
         <hr className="" />
