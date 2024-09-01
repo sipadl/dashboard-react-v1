@@ -22,22 +22,7 @@ export default function Breadcrumb({ before, after }) {
           }}>
             {before}
           </div>
-          <div style={{
-            width: '3px',
-            height: '6px',
-            position: 'relative'
-          }}>
-            <div style={{
-              width: '6px',
-              height: '3px',
-              position: 'absolute',
-              left: '0px',
-              top: '6px',
-              transform: 'rotate(-90deg)',
-              transformOrigin: '0 0',
-              border: '1px solid #353535'
-            }}></div>
-          </div>
+          <i className="bx bx-chevron-right"></i>
         </>
       ) : null}
       <div style={{

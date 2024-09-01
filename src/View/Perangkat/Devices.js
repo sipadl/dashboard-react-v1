@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumb, Input, SelectOption, Title, Table, Pagination } from '../../Component'
+import { Breadcrumb, Input, SelectOption, Title, Table, Pagination, ExportButton } from '../../Component'
 import { tableOne } from '../../Lib/Datas';
 
 export default function Devices() {
@@ -13,10 +13,7 @@ const dataTable = tableOne;
                     <Title data={'Perangkat'}/>
                 </div>
                 <div>
-                    <button className='btn btn-sm btn-light'> 
-                    <i className='bx bx-export mx-2'></i>
-                    Export
-                    </button>
+                    <ExportButton />
                 </div>
             </div>
         </div>

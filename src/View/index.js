@@ -17,8 +17,10 @@ import Login from "./Login/Login";
 import Daftar from "./Login/Daftar";
 import LupaPassword from "./Login/LupaPassword";
 import UbahKataSandi from "./Login/UbahKataSandi";
+import Onboarding from "./Onboarding/Onboarding";
 
 export {
+    Onboarding,
     UbahKataSandi,
     LupaPassword,
     Daftar,

@@ -21,13 +21,13 @@ export default function Daftar() {
                             <div className='h1'>Daftar</div>
                         </div>
                         <form onSubmit={() => formik.handleSubmit}>
-                            <Placeholder kelas={"h5 mt-4"} name={"Nama Pengguna"}/>
+                            <Placeholder kelas={"login-label mt-4"} name={"Nama Pengguna"}/>
                             <Input data={'username'} placeholder={"Nama Pengguna"} kelas={"w-100"}/>
-                            <Placeholder kelas={"h5 mt-4"} name={"Email"}/>
+                            <Placeholder kelas={"login-label mt-4"} name={"Email"}/>
                             <Input data={'username'} placeholder={"Email"} kelas={"w-100"}/>
-                            <Placeholder kelas={"h5 mt-4"} name={"Kata Sandi"}/>
+                            <Placeholder kelas={"login-label mt-4"} name={"Kata Sandi"}/>
                             <Input data={'password'} placeholder={"Kata Sandi"} kelas={"w-100"}/>
-                            <Placeholder kelas={"h5 mt-4"} name={"Konfirmasi Kata Sandi"}/>
+                            <Placeholder kelas={"login-label mt-4"} name={"Konfirmasi Kata Sandi"}/>
                             <Input data={'password'} placeholder={"Konfirmasi Kata Sandi"} kelas={"w-100"}/>
                             <div className="d-flex justify-content-between mt-3">
                                 <div>

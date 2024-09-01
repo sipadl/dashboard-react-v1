@@ -23,12 +23,12 @@ export const Menus = [
         icon: <i className='bx bx-store mx-1' ></i>,
         items: [],
     },
-    //  {
-    //     title: 'Merchant',
-    //     icon: <i className='bx bx-store mx-1' ></i>,
-    //     items: [],
+     {
+        title: 'Onboarding',
+        icon: <i className='bx bx-store mx-1' ></i>,
+        items: [],
 
-    // }, 
+    }, 
     {
         title: 'Pengguna & Peran',
         icon: <i className='bx bx-user-circle mx-1' ></i>,
@@ -325,5 +325,45 @@ export const biayaTambahan = [
         nama:'Admin',
         nilai:'5%',
         action: [<i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,]
+    },
+]
+
+
+export const dataOnboarding = [
+    {
+        logo: 'https://placehold.co/50',
+        name: 'Kopi Kenangan',
+        tipeBisnis: 'F&B',
+        telp: '08131166****',
+        email: 'project@example.co.id',
+        status: true,
+        action: [
+            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
+            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
+        ]
+    },
+    {
+        logo: 'https://placehold.co/50',
+        name: 'Janji Jiwa',
+        tipeBisnis: 'F&B',
+        telp: '08131166****',
+        email: 'project@example.co.id',
+        status: true,
+        action: [
+            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
+            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
+        ]
+    },
+    {
+        logo: 'https://placehold.co/50',
+        name: 'Starbuck',
+        tipeBisnis: 'F&B',
+        telp: '08131166****',
+        email: 'project@example.co.id',
+        status: true,
+        action: [
+            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
+            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
+        ]
     },
 ]

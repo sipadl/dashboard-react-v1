@@ -1,4 +1,5 @@
 import React from 'react'
+import ActiveBadge from './ActiveBadge';
 
 export default function Table({data}) {
     const header = Object.keys(data[0]);
@@ -16,9 +17,11 @@ export default function Table({data}) {
             {data.map((value, idx) => (
               <tr>
               {header.map((header) => (
-                      header == 'images' ? 
+                      header == 'images' || header == 'logo' ? 
                       <td className='text-center' key={idx}><img src={value[header]} alt='...'/></td>
-                      : 
+                      : header == 'status' ? 
+                      <td className='text-center' key={idx}><ActiveBadge /></td>
+                      :  
                       <td className='text-center' key={idx}>{value[header]}</td>
                   
               ))}

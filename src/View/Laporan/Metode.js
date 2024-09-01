@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Breadcrumb, Input, Pagination, SelectOption, Table, Title} from '../../Component'
+import {Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title} from '../../Component'
 import {Button} from 'react-bootstrap'
 import {tableOne} from '../../Lib/Datas'
 
@@ -15,10 +15,7 @@ export default class Metode extends Component {
                             <Title data={'Metode Pembayaran'}/>
                         </div>
                         <div>
-                            <button className='btn btn-sm btn-light'> 
-                            <i className='bx bx-export mx-2'></i>
-                            Export
-                            </button>
+                           <ExportButton />
                         </div>
                     </div>
                 </div>

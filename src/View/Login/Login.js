@@ -22,10 +22,10 @@ export default function Login() {
                     <div className='h1'>Masuk</div>
                     </div>
                     <form onSubmit={() => formik.handleSubmit}>
-                        <Placeholder kelas={"h5 mt-4"} name={"Nama Pengguna / Email"} />
-                        <Input data={'username'} placeholder={"Nama Pengguna / Email"} kelas={"w-100"} />
-                        <Placeholder kelas={"h5 mt-4"} name={"Kata Sandi"} />
-                        <Input data={'password'} placeholder={"Kata Sandi"} kelas={"w-100"} />
+                        <Placeholder kelas={"mt-4 login-label"} name={"Nama Pengguna / Email"} />
+                        <Input data={'username'} placeholder={"Nama Pengguna / Email"} kelas={"w-100 p-2"} />
+                        <Placeholder kelas={"mt-4 login-label"} name={"Kata Sandi"} />
+                        <Input data={'password'} placeholder={"Kata Sandi"} kelas={"w-100 p-2"} />
                         <div className="d-flex justify-content-between mt-3">
                             <div>
                                 <input type="checkbox" className="mx-1"/>

@@ -7,7 +7,7 @@ export default class BiayaTambahan extends Component {
     render() {
         return (
             <div>
-                <Breadcrumb after={'BiayaTambahan'} before={'Pengaturan'} />
+                <Breadcrumb after={'Biaya Tambahan'} before={'Pengaturan'} />
                 <div className='mt-4'>
                     <div className='d-flex justify-content-between'>
                         <div>

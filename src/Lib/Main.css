@@ -76,6 +76,23 @@ line-height: 20px;
 word-wrap: break-word
 }
 
+.main-title {
+  font-size: 32px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 44px;
+  word-wrap: break-word
+}
+
+.login-label {
+  color: #353535;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 20px;
+  word-wrap: break-word
+}
+
 .sidebar-sublink:hover {
     background-color: #E7E7FF;
     color: #6B4EFF !important;

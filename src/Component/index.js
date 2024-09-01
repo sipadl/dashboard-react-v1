@@ -10,8 +10,12 @@ import Table from "./Table"
 import Title from "./Title"
 import { Chart } from "./Chart"
 import PieChart from "./PieChart"
+import ExportButton from "./ExportButton"
+import ActiveBadge from "./ActiveBadge"
 
 export { 
+    ActiveBadge,
+    ExportButton,
     PieChart,
     Chart,
     ImageKiri,
