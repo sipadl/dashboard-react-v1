@@ -12,7 +12,7 @@ export default class Header extends Component {
                   </div>
                 </div>
                 <div className='frame-3'>
-                  <span className='johandika-lubis'>Johandika Lubis</span>
+                  <span className='johandika-lubis'>Steven</span>
                   <span className='admin'>Admin</span>
                 </div>
               </div>
