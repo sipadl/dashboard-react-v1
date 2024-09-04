@@ -1,34 +1,34 @@
-import React from 'react'
+import React from 'react';
 import ActiveBadge from './ActiveBadge';
 
-export default function Table({data}) {
-    const header = Object.keys(data[0]);
-    return (
-    <div className=''>
-      <table className='table table-bordered rounded-4 table-responsive'>
+export default function Table({ data }) {
+  const header = Object.keys(data[0]);
+  return (
+    <div className='table-responsive'>
+      <table className='table table-custom'>
         <thead>
           <tr>
-            {header.map((val ,i) => (
-              <th className='text-center' key={i}>{val}</th>
+            {header.map((val, i) => (
+              <th key={i}>{val}</th>
             ))}
           </tr>
         </thead>
         <tbody>
-            {data.map((value, idx) => (
-              <tr>
+          {data.map((value, idx) => (
+            <tr key={idx}>
               {header.map((header) => (
-                      header == 'images' || header == 'logo' ? 
-                      <td className='text-center' key={idx}><img src={value[header]} alt='...'/></td>
-                      : header == 'status' ? 
-                      <td className='text-center' key={idx}><ActiveBadge /></td>
-                      :  
-                      <td className='text-center' key={idx}>{value[header]}</td>
-                  
+                header === 'images' || header === 'logo' ? (
+                  <td key={header}><img src={value[header]} alt='...' /></td>
+                ) : header === 'status' ? (
+                  <td key={header}><ActiveBadge /></td>
+                ) : (
+                  <td key={header}>{value[header]}</td>
+                )
               ))}
-              </tr>
-            ))}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
-  )
+  );
 }

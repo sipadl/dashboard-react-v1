@@ -1,54 +1,75 @@
-import React from "react";
+// src/components/LineChart.js
 
-export const Chart = ({name}) => {
-  return (
-    <div className="box mt-4">
-      <div className="group">
-        <div className="overlap">
-          <div className="medium-pie-chart">
-            <div className="title">
-              <div className="text-wrapper">{name}</div>
-              <div className="div">Total :&nbsp;&nbsp;42</div>
-            </div>
-            <div className="frame">
-              <div className="text-wrapper-2">45</div>
-              <div className="text-wrapper-3">40</div>
-              <div className="text-wrapper-3">35</div>
-              <div className="text-wrapper-3">30</div>
-              <div className="text-wrapper-3">25</div>
-              <div className="text-wrapper-3">20</div>
-            </div>
-          </div>
-          <div className="group-2">
-            <div className="overlap-group">
-              <img className="vector" alt="Vector" src="vector-13.svg" />
-              <div className="group-3">
-                <div className="ellipse-wrapper">
-                  <div className="ellipse" />
-                </div>
-                <div className="chart-hover-badge">
-                  <div className="semi-rounded-badge">
-                    <div className="div-wrapper">
-                      <div className="text-wrapper-4">42</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="frame-wrapper">
-              <div className="frame-2">
-                <div className="text-wrapper-2">11 Mar</div>
-                <div className="text-wrapper-2">12 Mar</div>
-                <div className="text-wrapper-2">13 Mar</div>
-                <div className="text-wrapper-2">14 Mar</div>
-                <div className="text-wrapper-2">15 Mar</div>
-                <div className="text-wrapper-2">16 Mar</div>
-                <div className="text-wrapper-2">17 Mar</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+import React from 'react';
+import {Line} from 'react-chartjs-2';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+} from 'chart.js';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
+const Chart = ({name}) => {
+    const data = {
+        labels: [
+            'August 29',
+            'August 30',
+            'August 31',
+            'September 1',
+            'September 2',
+            'September 3'
+        ],
+        datasets: [
+            {
+                label: 'Sales',
+                data: [
+                    150,
+                    170,
+                    130,
+                    190,
+                    200,
+                    220
+                ],
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }
+        ]
+    };
+
+    const options = {
+        scales: {
+            x: {
+                ticks: {
+                    autoSkip: false
+                }
+            },
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    return (
+      <div className='card-dashbord p-4 mt-4'>
+      {/* <div className='text-pie-chart'>{name}</div> */}
+    <Line data={data} options={options}/>
     </div>
-  );
+    );
 };
+
+export default Chart;

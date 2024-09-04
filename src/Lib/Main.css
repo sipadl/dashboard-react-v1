@@ -211,6 +211,40 @@ word-wrap: break-word
     word-wrap: break-word;
 }
 
+
+.table-custom {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .table-custom th, .table-custom td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .table-custom th {
+    border-bottom: 2px solid #f0f0f0; /* Garis bawah untuk header */
+    background-color: #fafafa;
+  }
+  
+  .table-custom td {
+    border-bottom: 1px solid #f0f0f0; /* Garis bawah untuk baris */
+  }
+  
+  .table-custom tbody tr:last-child td {
+    border-bottom: none; /* Hilangkan garis bawah pada baris terakhir */
+  }
+  
+  .table-custom img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
 /* Generate By Figma */
 .box {
     height: 345px;

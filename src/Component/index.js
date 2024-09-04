@@ -8,10 +8,10 @@ import SelectOption from "./SelectOption"
 import Sidebar from "./SideBar"
 import Table from "./Table"
 import Title from "./Title"
-import { Chart } from "./Chart"
 import PieChart from "./PieChart"
 import ExportButton from "./ExportButton"
 import ActiveBadge from "./ActiveBadge"
+import Chart from "./Chart"
 
 export { 
     ActiveBadge,

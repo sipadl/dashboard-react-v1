@@ -24,7 +24,7 @@ export default class Home extends Component {
                 </div>
                 <div className="row mt-4">
                     <div className="col-md-4">
-                        <div className="card-dashbord p-3">
+                        <div className="card-dashbord p-3 mt-2">
                             <div className="d-flex">
                                     <div className="">
                                         <div className="bg-purple-light p-2 fit rounded-circle">
@@ -39,7 +39,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <div className="card-dashbord p-3">
+                        <div className="card-dashbord p-3 mt-2">
                             <div className="d-flex">
                                     <div className="">
                                         <div className="bg-purple-light p-2 fit rounded-circle">
@@ -54,7 +54,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <div className="card-dashbord p-3">
+                        <div className="card-dashbord p-3 mt-2">
                         <div className="d-flex">
                                     <div className="">
                                         <div className="bg-purple-light p-2 fit rounded-circle">
