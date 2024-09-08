@@ -65,9 +65,15 @@ const Chart = ({name}) => {
     };
 
     return (
-      <div className='card-dashbord p-4 mt-4'>
+      <div className='card-dashbord p-4 mt-4 row'>
+        <div className='col-md-12'>
       {/* <div className='text-pie-chart'>{name}</div> */}
-    <Line data={data} options={options}/>
+        <div className='head-chart-title'>{name}</div>
+         <div className='mt-2 head-chart-total'>Total : 42</div>
+        </div>
+        <div className='col-md-12'>
+            <Line data={data} options={options}/>
+        </div>
     </div>
     );
 };

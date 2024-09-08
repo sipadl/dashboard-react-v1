@@ -1,11 +1,17 @@
-import React, {Component} from 'react'
-import {Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title} from '../../Component'
-import {Button} from 'react-bootstrap'
-import {tableOne} from '../../Lib/Datas'
+import React, { Component } from 'react';
+import { Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title } from '../../Component';
+import { metodePembayaran } from '../../Lib/Datas';
 
 export default class Metode extends Component {
     render() {
-        const dataTable = tableOne;
+        const dataTable = metodePembayaran;
+        const td = dataTable.map((value, key) => (
+            <tr key={key}>
+                <td>{value.metoode}</td>
+                <td>{value.Kuantitas}</td>
+                <td>{value.SubTotal}</td>
+            </tr>
+        ))
         return (
             <div>
                 <Breadcrumb before={'Laporan'} after={'Metode Pembayaran'}/>
@@ -46,7 +52,9 @@ export default class Metode extends Component {
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
-                    <Table data={dataTable}/>
+                    <Table 
+                    th={['Metode Pembayaran','Kuantitas','SubTotal']}
+                    data={td}/>
                 </div>
                 <div className='mt-2'>
                 <Pagination

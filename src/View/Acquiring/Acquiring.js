@@ -5,6 +5,23 @@ import {dataAcquiring, tableOne} from '../../Lib/Datas'
 
 export default class Acquiring extends Component {
     render() {
+        const datas = dataAcquiring.map((val, key) => (
+            <tr key={key}>
+                <td>{val.MerchantId}</td>
+                <td>{val.MerchantName}</td>
+                <td>{val.TipeBisnis}</td>
+                <td>{val.NomorAccount}</td>
+                <td>{val.KodeBank}</td>
+                <td>{val.Mdr}</td>
+                <td>
+                {val.Status ? 
+                    <div className="status-ijo">Active</div>
+                    :
+                    <div className="status-merah">Inactive</div>
+                }
+                </td>
+            </tr>
+        ))
         return (
             <div>
                 <Breadcrumb after={'Acquiring'}/>
@@ -48,7 +65,11 @@ export default class Acquiring extends Component {
                     </div>
                 </div> */}
                 <div className='p-0 mt-3'>
-                    <Table data={dataAcquiring}/>
+                    <Table 
+                    th={['Merchant ID', 'Merchant Name','Tipe Bisnis',
+                        'Nomor Akun','Kode Bank', 'MDR', 'Status'
+                    ]}
+                    data={datas}/>
                 </div>
                 <div className='mt-2'>
                 <Pagination

@@ -2,10 +2,28 @@ import React, {Component} from 'react'
 import {Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title} from '../../Component'
 import {Button} from 'react-bootstrap'
 import { tableOne } from '../../Lib/Datas';
+import iconeyes from '../../assets/eye.svg'
 
 export default class Refund extends Component {
     render() {
-        const dataTable = tableOne;
+        const td = tableOne.map((value, key) => (
+            <tr key={key}>
+                <td>{value.noRef}</td>
+                <td>{value.timeTrans}</td>
+                <td>{value.totalTrans}</td>
+                <td>{value.typeCard}</td>
+                <td>{value.typeTrans}</td>
+                <td>{value.terminal}</td>
+                <td>{value.mid}</td>
+                <td>{value.trackNumber}</td>
+                <td>{value.batch}</td>
+                <td>
+                    <a href="detail-refund">
+                        <img src={iconeyes} />
+                    </a>
+                </td>
+            </tr>
+        ))
         return (
             <div>
                 <Breadcrumb before={'Laporan'} after={'Refund'}/>
@@ -46,7 +64,13 @@ export default class Refund extends Component {
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
-                    <Table data={dataTable}/>
+                    <Table 
+                        data={td} 
+                        th={[
+                            'No Ref','Waktu Transaksi','Total','Jenis Kartu','Jenis Transaksi',
+                            'Terminal', 'MID', 'Trace Number', 'Batch Settlement'
+                        ]}
+                        />
                 </div>
                 <div className='mt-2'>
                 <Pagination

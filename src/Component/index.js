@@ -12,8 +12,10 @@ import PieChart from "./PieChart"
 import ExportButton from "./ExportButton"
 import ActiveBadge from "./ActiveBadge"
 import Chart from "./Chart"
+import InputGroup from "./InputGroup"
 
 export { 
+    InputGroup,
     ActiveBadge,
     ExportButton,
     PieChart,

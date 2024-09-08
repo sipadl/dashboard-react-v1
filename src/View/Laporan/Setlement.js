@@ -1,11 +1,28 @@
-import React, {Component} from 'react'
-import {Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title} from '../../Component'
-import {Button} from 'react-bootstrap'
-import { tableOne } from '../../Lib/Datas';
+import React, { Component } from 'react';
+import { Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title } from '../../Component';
+import { dataSettlement } from '../../Lib/Datas';
+import iconeyes from '../../assets/eye.svg';
 
 export default class Settlement extends Component {
     render() {
-        const dataTable = tableOne;
+        const td = dataSettlement.map((value, key) => (
+            <tr key={key}>
+                <td>{value.noRef}</td>
+                <td>{value.waktuSettlement}</td>
+                <td>{value.totalAmount}</td>
+                <td>{value.mdr}</td>
+                <td>{value.netAmount}</td>
+                <td>{value.jenisKartu}</td>
+                <td>{value.terminalId}</td>
+                <td>{value.mid}</td>
+                <td>{value.status}</td>
+                <td>
+                    <a href="detail-settlement">
+                        <img src={iconeyes} />
+                    </a>
+                </td>
+            </tr>
+        ))
         return (
             <div>
                 <Breadcrumb  before={'Laporan'} after={'Settlement'}/>
@@ -46,7 +63,12 @@ export default class Settlement extends Component {
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
-                    <Table data={dataTable}/>
+                    <Table
+                    th={[
+                        'No Ref','Waktu Settlement','Total Amount','Fee Merchant / MDR (1%)','Net Amount','Jenis Kartu',
+                        'Terminal ID', 'MID', 'Status','Aksi'
+                    ]}
+                     data={td}/>
                 </div>
                 <div className='mt-2'>
                 <Pagination

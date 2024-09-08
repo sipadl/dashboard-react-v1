@@ -97,6 +97,12 @@ word-wrap: break-word
     background-color: #E7E7FF;
     color: #6B4EFF !important;
 }
+.btn-lgx {
+    background-color: rgb(248, 247, 255) !important;
+    color: rgb(53, 53, 53) !important;
+    padding: 0.7rem !important;
+    border-radius: 12px !important;
+}
 
 .btn-purple {
     background-color: rgb(107,78,255) !important;
@@ -219,6 +225,22 @@ word-wrap: break-word
     overflow: hidden;
     width: 100%;
   }
+.text-halaman-detail {
+    color: #353535;
+    font-size: 32px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 44px;
+    word-wrap: break-word;
+}
+.text-halaman-detail-small {
+    color: #353535;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 30px;
+    word-wrap: break-word;
+}
   
   .table-custom th, .table-custom td {
     padding: 10px;
@@ -244,6 +266,106 @@ word-wrap: break-word
     object-fit: contain;
     border-radius: 8px;
   }
+
+.head-chart-title {
+    color: #303437;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.head-chart-total {
+    color: #303437;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    word-wrap:break-word
+}
+
+.status-ijo {
+color: #00BA34;
+ font-size: 12px;
+ font-family: Inter;
+ font-weight: 500;
+ line-height: 18px;
+ word-wrap: break-word;
+}
+
+.status-merah {
+    color: #F54949;
+     font-size: 12px;
+     font-family: Inter;
+     font-weight: 500;
+     line-height: 18px;
+     word-wrap: break-word
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  margin: 0px auto;
+}
+
+.toggle {
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  z-index: 1;
+  text-align: center;
+  width: 50%;
+  line-height: 30px;
+}
+
+.toggle[for="left"] {
+  left: 0;
+}
+
+.toggle[for="right"] {
+  right: 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #6B4EFF;
+  transition: background-color 0.3s;
+}
+
+.slider-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+/* When "Right" radio button is selected */
+input#right:checked ~ .slider .slider-button {
+  left: 72px;
+}
+
+input#right:checked ~ .slider {
+  background-color: #f44336;
+}
+
 
 /* Generate By Figma */
 .box {

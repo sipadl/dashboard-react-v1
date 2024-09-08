@@ -18,8 +18,30 @@ import Daftar from "./Login/Daftar";
 import LupaPassword from "./Login/LupaPassword";
 import UbahKataSandi from "./Login/UbahKataSandi";
 import Onboarding from "./Onboarding/Onboarding";
+import DetailVoid from "./Laporan/Detail/DetailVoid";
+import DetailRefund from "./Laporan/Detail/DetailRefund";
+import DetailSettlement from "./Laporan/Detail/DetailSettlement";
+import TambahDevice from "./Perangkat/Detail/TambahDevice";
+import EditDevice from "./Perangkat/Detail/EditDevice";
+import TambahEdc from "./Perangkat/Detail/TambahEdc";
+import EditEdc from "./Perangkat/Detail/EditEdc";
+import TambahSound from "./Perangkat/Detail/TambahSound";
+import EditSound from "./Perangkat/Detail/EditSound";
+import TambahBiayaBaru from "./Pengaturan/Optional/TambahBiayaBaru";
+import EditBiayaBaru from "./Pengaturan/Optional/EditBiayaBaru";
 
 export {
+    EditBiayaBaru,
+    TambahBiayaBaru,
+    TambahSound,
+    EditSound,
+    TambahEdc,
+    EditEdc,
+    EditDevice,
+    TambahDevice,
+    DetailSettlement,
+    DetailRefund,
+    DetailVoid,
     Onboarding,
     UbahKataSandi,
     LupaPassword,

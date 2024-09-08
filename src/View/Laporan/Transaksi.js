@@ -6,6 +6,21 @@ import { tableOne } from '../../Lib/Datas';
 export default class Transaksi extends Component {
     render() {
         const dataTable = tableOne;
+        const td = dataTable.map((value, key) => (
+            <tr key={key}>
+                <td>{value.noRef}</td>
+                <td>{value.timeTrans}</td>
+                <td>{value.totalTrans}</td>
+                <td>{value.typeCard}</td>
+                <td>{value.typeTrans}</td>
+                <td>{value.terminal}</td>
+                <td>{value.mid}</td>
+                <td>{value.trackNumber}</td>
+                <td>{value.batch}</td>
+            </tr>
+        ));
+        
+
         return (
             <div>
                 <Breadcrumb before={'Laporan'} after={'Transaksi'}/>
@@ -46,7 +61,13 @@ export default class Transaksi extends Component {
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
-                    <Table data={dataTable}/>
+                    <Table 
+                    data={td} 
+                    th={[
+                        'No Ref','Waktu Transaksi','Total','Jenis Kartu','Jenis Transaksi',
+                        'Terminal', 'MID', 'Trace Number', 'Batch Settlement'
+                    ]}
+                    />
                 </div>
                 <div className='mt-2'>
                 <Pagination

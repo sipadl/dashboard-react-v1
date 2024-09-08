@@ -6,8 +6,8 @@ export default class Home extends Component {
     render() {
         return (
             <div style={{overflowX:'hidden'}}>
-                <Breadcrumb after={"Dashbor"} />
-                <Title kelas={"mt-3"} data={"Dashbor"}/>
+                <Breadcrumb after={"Dshboard"} />
+                <Title kelas={"mt-3"} data={"Dashboard"}/>
                 <div className="row">
                     <div className="col-md-2">
                     <SelectOption data={['Kopi Kenangan','Janji Jiwa', 'Indomaret']} kelas={"mt-2"} name={"Merchant"} />

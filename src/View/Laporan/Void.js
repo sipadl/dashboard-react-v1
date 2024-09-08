@@ -1,11 +1,28 @@
-import React, {Component} from 'react'
-import {Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title} from '../../Component'
-import {Button} from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title } from '../../Component';
 import { tableOne } from '../../Lib/Datas';
+import iconeyes from '../../assets/eye.svg';
 
 export default class Void extends Component {
     render() {
-        const dataTable = tableOne;
+        const td = tableOne.map((value, key) => (
+            <tr key={key}>
+                <td>{value.noRef}</td>
+                <td>{value.timeTrans}</td>
+                <td>{value.totalTrans}</td>
+                <td>{value.typeCard}</td>
+                <td>{value.typeTrans}</td>
+                <td>{value.terminal}</td>
+                <td>{value.mid}</td>
+                <td>{value.trackNumber}</td>
+                <td>{value.batch}</td>
+                <td>
+                    <a href="detail-void">
+                        <img src={iconeyes} />
+                    </a>
+                </td>
+            </tr>
+        ))
         return (
             <div>
                 <Breadcrumb before={'Laporan'} after={'Void'}/>
@@ -46,7 +63,11 @@ export default class Void extends Component {
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
-                    <Table data={dataTable}/>
+                    <Table th={[
+                        'No Ref','Waktu Transaksi','Total','Jenis Kartu','Jenis Transaksi',
+                        'Terminal', 'MID', 'Trace Number', 'Batch Settlement','Aksi'
+                    ]}
+                    data={td}/>
                 </div>
                 <div className='mt-2'>
                 <Pagination

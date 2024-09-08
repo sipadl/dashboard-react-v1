@@ -3,6 +3,30 @@ import { Breadcrumb, ExportButton, Input, Pagination, Table, Title } from '../..
 import { dataOnboarding } from '../../Lib/Datas';
 
 export default function Onboarding() {
+    const datax = dataOnboarding.map((val, key) => (
+        <tr key={key}>
+            <td>
+                <img width={30} src={val.logo} />
+            </td>
+            <td>{val.name}</td>
+            <td>{val.tipeBisnis}</td>
+            <td>{val.telp}</td>
+            <td>{val.email}</td>
+            <td>{val.status ? 
+                <div className="status-ijo">Active</div>
+                : 
+                <div className="status-merah">Inactive</div>
+            }</td>
+            <td>
+                <a className='mx-2 btn btn-transparent' href="/edit-onboarding">
+                        <i className="bx bx-pencil"></i>
+                </a>
+                <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                    <i className="bx bx-trash"></i>
+                </button>
+            </td>
+        </tr>
+    ))
   return (
     <div>
         <Breadcrumb after={'Onboarding'}/>
@@ -32,23 +56,15 @@ export default function Onboarding() {
             </div>
         </div>
         <div className='row mt-4'>
-            <Table data={dataOnboarding}/>
+            <Table 
+            th={['Logo','Nama','Tipe Bisnis','Telpon','Email','Status','Aksi']}
+            data={datax}/>
             <Pagination
                 itemsPerPage={10}
                 totalItems={50}
                 paginate={5}
                 currentPage={2}
             />
-        {/* <table className='col-md-12 table table-responsive table-bordered' >
-            <thead>
-                <th>
-                    <td>SN</td>
-                    <td>Tipe Perangkat</td>
-                    <td>IMEI</td>
-                    <td>TID</td>
-                </th>
-            </thead>
-        </table> */}
         </div>
     </div>
   )

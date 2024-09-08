@@ -1,9 +1,28 @@
 import React from 'react'
 import { Breadcrumb, Input, SelectOption, Title, Table, Pagination, ExportButton } from '../../Component'
-import { tableOne } from '../../Lib/Datas';
+import { dataPerangkat, tableOne } from '../../Lib/Datas';
 
 export default function SoundBox() {
-const dataTable = tableOne;
+const dataTable = dataPerangkat;
+const td = dataTable.map((value,key) => (
+    <tr key={key}>
+        <td>{value.sn}</td>
+        <td>{value.tipePerangkat}</td>
+        <td>{value.imei}</td>
+        <td>{value.mid}</td>
+        <td>{value.tid}</td>
+        <td>{value.sim}</td>
+        <td>{value.tanggal}</td>
+        <td>
+            <a className='mx-2 btn btn-transparent' href="/edit-sound">
+                <i className="bx bx-pencil"></i>
+            </a>
+            <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                <i className="bx bx-trash"></i>
+            </button>
+        </td>
+    </tr>
+))
   return (
     <div>
         <Breadcrumb before={'Manegement Perangkat'} after={'QR Sound Box'}/>
@@ -36,14 +55,16 @@ const dataTable = tableOne;
                     </div>
                 </div>
                 <div className='align-self-end'>
-                    <button type="button" className='btn btn-light btn-sm btn-purple'>
+                    <a href="/tambah-sound" className='btn btn-light btn-sm btn-purple'>
                         + Tambah Perangkat
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
         <div className='row mt-4'>
-            <Table data={dataTable}/>
+            <Table 
+            th={['SN','Tipe Perangkat','IMEI','MID','TID','SIM','Tanggal Aktivasi','Aksi']}
+            data={td}/>
             <Pagination
                 itemsPerPage={10}
                 totalItems={50}

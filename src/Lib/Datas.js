@@ -47,6 +47,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -57,6 +58,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -67,6 +69,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -77,6 +80,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -87,6 +91,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -97,6 +102,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -107,6 +113,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -117,6 +124,7 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
@@ -127,16 +135,68 @@ export const tableOne = [
         timeTrans:'2',
         totalTrans:'10000',
         typeCard:'Debit - BCA',
+        typeTrans: 'Sale',
         terminal:'JKT001',
         mid:'0000001',
         trackNumber:'081290669170',
         batch:'Batch 1'
     },
+    
+]
+
+export const metodePembayaran = [
+    {
+        metoode:'Debit',
+        Kuantitas:'200',
+        SubTotal:'15.400.000',
+    },
+    {
+        metoode:'Kredit',
+        Kuantitas:'200',
+        SubTotal:'15.400.000',
+    },
+    {
+        metoode:'Qris',
+        Kuantitas:'200',
+        SubTotal:'15.400.000',
+    },
+    {
+        metoode:'E-Money',
+        Kuantitas:'200',
+        SubTotal:'15.400.000',
+    },
+]
+
+export const dataSettlement = [
+    {
+        noRef:'0020010',
+        waktuSettlement:'28/04/2022',
+        totalAmount:'1.320.000',
+        mdr:'13.200',
+        netAmount:'1.306.800',
+        jenisKartu:'Debit - BCA',
+        terminalId:'JKT002',
+        mid: 'MID12345678-JKT2',
+        status:'Berhasil'
+
+    }
+]
+
+export const dataPerangkat = [
+    {
+        sn:'SN12345678',
+        tipePerangkat:'BDM 100',
+        imei:'868174068747511',
+        mid:'MID12345678-JKT1',
+        tid:'554262406874733',
+        sim:'081999089999',
+        tanggal:'22/04/24'
+    }
 ]
 
 export const dataMerchant = [
     {
-        images: 'https://placehold.co/50',
+        images: 'https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-Bank-BCA-1.png',
         name: 'BCA',
         kodeIssuser: 'BCA',
         kontakPerson: 'Jhon Doe',
@@ -148,32 +208,7 @@ export const dataMerchant = [
             <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
         ]
     },
-    {
-        images: 'https://placehold.co/50',
-        name: 'BSI',
-        kodeIssuser: 'BSI',
-        kontakPerson: 'Jhon Doe',
-        email: 'project@example.co.id',
-        telp: '08131166****',
-        status: true,
-        action: [
-            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
-            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
-        ]
-    },
-    {
-        images: 'https://placehold.co/50',
-        name: 'BNI',
-        kodeIssuser: 'BNI',
-        kontakPerson: 'Jhon Doe',
-        email: 'project@example.co.id',
-        telp: '08131166****',
-        status: true,
-        action: [
-            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
-            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
-        ]
-    },
+    
 ]
 
 
@@ -185,7 +220,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -194,7 +229,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: false
     },
     {
         MerchantId:'M01',
@@ -203,7 +238,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: false
     },
     {
         MerchantId:'M01',
@@ -212,7 +247,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -221,7 +256,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -230,7 +265,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -239,7 +274,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -248,7 +283,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -257,7 +292,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -266,7 +301,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
     {
         MerchantId:'M01',
@@ -275,7 +310,7 @@ export const dataAcquiring = [
         NomorAccount: '1234567890',
         KodeBank: '014',
         Mdr: '2.5%',
-        Status: <div className="badge badge-success bg-success">Active</div>
+        Status: true
     },
 ]
 
@@ -296,19 +331,19 @@ export const dataPengguna = [
 
 export const dataPeran = [
     {
-        peran:'super admin',
+        peran:'Super Admin',
         dibuat: '-',
         diperbarui: '-',
         action: '-'
     },
     {
-        peran:'administrator',
+        peran:'Administrator',
         dibuat: '01-04-2024',
         diperbarui: '01-04-2024',
         action: [<i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,]
     },
     {
-        peran:'operator',
+        peran:'Operator',
         dibuat: '01-04-2024',
         diperbarui: '01-04-2024',
         action: [<i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,]
@@ -317,7 +352,7 @@ export const dataPeran = [
 
 export const biayaTambahan = [
     {
-        nama:'ppn',
+        nama:'PPN',
         nilai:'10%',
         action: [<i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,]
     },
@@ -331,32 +366,8 @@ export const biayaTambahan = [
 
 export const dataOnboarding = [
     {
-        logo: 'https://placehold.co/50',
-        name: 'Kopi Kenangan',
-        tipeBisnis: 'F&B',
-        telp: '08131166****',
-        email: 'project@example.co.id',
-        status: true,
-        action: [
-            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
-            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
-        ]
-    },
-    {
-        logo: 'https://placehold.co/50',
-        name: 'Janji Jiwa',
-        tipeBisnis: 'F&B',
-        telp: '08131166****',
-        email: 'project@example.co.id',
-        status: true,
-        action: [
-            <i style={{color:'black'}} className='bx bxs-pencil mx-1' ></i>,
-            <i style={{color:'black'}} className='bx bxs-books mx-1' ></i>
-        ]
-    },
-    {
-        logo: 'https://placehold.co/50',
-        name: 'Starbuck',
+        logo: 'https://w7.pngwing.com/pngs/83/913/png-transparent-coffee-espresso-tea-cafe-starbucks-starbucks-logo-material-other-free-logo-design-template-trademark.png',
+        name: 'Starbucks',
         tipeBisnis: 'F&B',
         telp: '08131166****',
         email: 'project@example.co.id',

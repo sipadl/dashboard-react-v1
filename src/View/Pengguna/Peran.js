@@ -5,6 +5,23 @@ import {biayaTambahan, dataPengguna, dataPeran, tableOne} from '../../Lib/Datas'
 
 export default class Peran extends Component {
     render() {
+        const body = dataPeran.map((val,key) => (
+            <tr key={key}>
+                <td>{val.peran}</td>
+                <td>{val.dibuat}</td>
+                <td>{val.diperbarui}</td>
+                <td>{val.aksi == '-' ? '' : 
+                    <>
+                    <a className='mx-2 btn btn-transparent' href="/edit-onboarding">
+                    <i className="bx bx-pencil"></i>
+                    </a>
+                    <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                        <i className="bx bx-trash"></i>
+                    </button>
+                    </>
+                    }</td>
+            </tr>
+        ))
         return (
             <div>
                 <Breadcrumb after ={'Peran'} before={'Pengguna & Peran'} />
@@ -28,7 +45,9 @@ export default class Peran extends Component {
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
-                    <Table data={biayaTambahan}/>
+                    <Table 
+                    th={['Peran','Dibuat','Diperbarui','Aksi']}
+                    data={body}/>
                 </div>
                 <div className='mt-2'>
                 <Pagination
