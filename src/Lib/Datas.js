@@ -1,6 +1,6 @@
 export const Menus = [
     {
-        title: 'Dashbor',
+        title: 'Dashboard',
         icon: <i className='bx bx-home mx-1' ></i>,
         items: [],
     }, {
