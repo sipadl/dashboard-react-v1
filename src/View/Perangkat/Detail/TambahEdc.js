@@ -53,8 +53,8 @@ export default function TambahEdc() {
         </div>
         <div className="col-md-6 col xs-12">
           <InputGroup
-            title={"Pointer *"}
-            placeholder={"Pointer"}
+            title={"Printer *"}
+            placeholder={"Printer"}
             name={"battery"}
             />
         </div>

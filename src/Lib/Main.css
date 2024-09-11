@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 .sidebar {
     height: 100vh;
@@ -221,7 +222,6 @@ word-wrap: break-word
 .table-custom {
     border-collapse: separate;
     border-spacing: 0;
-    border-radius: 8px;
     overflow: hidden;
     width: 100%;
   }
@@ -243,8 +243,7 @@ word-wrap: break-word
 }
   
   .table-custom th, .table-custom td {
-    padding: 10px;
-    text-align: center;
+    padding: 12px;
   }
   
   .table-custom th {
@@ -284,6 +283,24 @@ word-wrap: break-word
     word-wrap:break-word
 }
 
+.body-status-ijo {
+    background: #DEF9E7;
+    height: auto;
+    text-align: center;
+    width: 50px;
+    border: 1px solid #DEF9E7;
+    border-radius: 200px;
+}
+.body-status-merah {
+    background: #FDDBDB;
+    height: auto;
+    text-align: center;
+    width: 70px;
+    border: 1px solid #FDDBDB;
+    border-radius: 200px;
+}
+
+
 .status-ijo {
 color: #00BA34;
  font-size: 12px;
@@ -302,12 +319,55 @@ color: #00BA34;
      word-wrap: break-word
 }
 
+.dropdown-purple {
+    border: 1px solid rgb(107,78,255) !important;
+}
+
+.form-control {
+    font-size: 12px !important;
+    padding: 12px !important;
+}
+
+/* Note: Direct styling of <option> elements has limited support */
+.custom-select option {
+    background-color: white; /* Default option background */
+    color: black;  /* Default option text color */
+}
+
+/* Change option color on hover and focus (limited support) */
+.custom-select option:hover,
+.custom-select option:focus {
+    background-color: rgb(107, 78, 255); /* Purple on hover/focus */
+    color: white; /* Change text color to white */
+}
+
+.table-custom thead tr, th {
+    border-bottom: 1px #353535;
+    color: #353535;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 18px;
+    word-wrap: break-word;
+}
+
+.table-custom tbody tr {
+    border-bottom: 1px #353535;
+    color: #353535;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 18px;
+    word-wrap: break-word;
+}
+
+
 .slider-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  width: 70px;
+  width: 56px;
   height: 30px;
   background-color: #ccc;
   border-radius: 30px;

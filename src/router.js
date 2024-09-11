@@ -31,7 +31,7 @@ export default class Index extends Component {
                 <Route path="/perangkat" element={<Devices />} />
                 <Route path="/qr_soundbox" element={<SoundBox />} />
                 <Route path="/edc" element={<Edc />} />
-                <Route path="/issuser" element={<Issuser />} />
+                <Route path="/issuer" element={<Issuser />} />
                 <Route path="/void" element={<Void />} />
                 <Route path="/acquiring" element={<Acquiring />} />
                 <Route path="/pengguna" element={<Pengguna />} />

@@ -34,11 +34,11 @@ export default function Issuser() {
                     </div>
             </td>
             <td>
-                <a className='mx-2 btn btn-transparent' href="/edit-issuer">
-                    <i className="bx bx-pencil"></i>
+                <a className='m-0 px-1 btn btn-transparent' href="/edit-issuer">
+                    <i className="bx bx-pencil" style={{color: '#979C9E'}}></i>
                 </a>
-                <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
-                    <i className="bx bx-trash"></i>
+                <button className='m-0 px-1 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                    <i className="bx bx-trash" style={{color: '#979C9E'}}></i>
                 </button>
             </td>
         </tr>
@@ -59,24 +59,24 @@ export default function Issuser() {
             <div className='w-auto mt-4'>
                 <div className='row'>
                     <div className='col-md-2 col-sm-12 col-xs-2 col-xs-12'>
-                        <SelectOption name={'perangkat'} data={['EDC', 'Sound Box']} kelas={'w-100'}/>
+                        <SelectOption name={'perangkat'} data={['EDC', 'Soundbox']} kelas={'w-100'}/>
                     </div>
                 </div>
                 <div className='d-flex justify-content-between'>
                     <div className='row mt-4'>
                         <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
-                            <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
+                            <Input data={'cari'} placeholder={'Cari nama issuer'} kelas={'mr-2'}/>
                         </div>
                         <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                             <SelectOption
                                 name={'waktu'}
-                                data={['7 Hari Terakhir ', 'Hari Ini', '30 Hari Terakhir']}
+                                data={['7 Hari Terakhir ', 'Hari ini', '30 hari terakhir']}
                                 kelas={'w-100'}/>
                         </div>
                         <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                             <SelectOption
                                 name={'cabang'}
-                                data={['Semua Cabang', 'Jakarta Timur', 'Jakarta Selatan', 'Jakarta Barat']}
+                                data={['Semua cabang', 'Jakarta timur', 'Jakarta selatan', 'Jakarta barat']}
                                 kelas={'w-100'}/>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ export default function Issuser() {
             </div>
             <div className='row mt-4'>
                 <Table 
-                th={['No','Logo','Nama','Kode Issuer','Kontak Person','Email','No. Telpon', 'Status', 'Aksi']}
+                th={['No','Logo','Nama','Kode Issuer','Kontak Person','Email','No. Telepon', 'Status', 'Aksi']}
                 data={td}/>
                 <Pagination itemsPerPage={10} totalItems={50} paginate={5} currentPage={2}/> {/* <table className='col-md-12 table table-responsive table-bordered' >
             <thead>

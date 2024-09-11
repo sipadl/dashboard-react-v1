@@ -7,16 +7,17 @@ export default class Peran extends Component {
     render() {
         const body = dataPeran.map((val,key) => (
             <tr key={key}>
+                <td style={{placeContent:'center'}}><input type="checkbox" /></td>
                 <td>{val.peran}</td>
                 <td>{val.dibuat}</td>
                 <td>{val.diperbarui}</td>
-                <td>{val.aksi == '-' ? '' : 
+                <td>{val.action == '-' ? '-' : 
                     <>
-                    <a className='mx-2 btn btn-transparent' href="/edit-onboarding">
-                    <i className="bx bx-pencil"></i>
+                    <a className='m-0 px-1 btn btn-transparent' href="/edit-onboarding">
+                    <i className="bx bx-pencil" style={{color: '#979C9E'}}></i>
                     </a>
-                    <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
-                        <i className="bx bx-trash"></i>
+                    <button className='m-0 px-1 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                        <i className="bx bx-trash" style={{color: '#979C9E'}}></i>
                     </button>
                     </>
                     }</td>
@@ -40,13 +41,13 @@ export default class Peran extends Component {
                     <div>
                         <button className='btn btn-sm btn-purple btn-light mt-4'> 
                         <i className='bx bx-plus mx-2'></i>
-                        Tambah Biaya Tambahan
+                        Tambah Peran
                         </button>
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
                     <Table 
-                    th={['Peran','Dibuat','Diperbarui','Aksi']}
+                    th={[' ','Peran','Dibuat','Diperbarui','Aksi']}
                     data={body}/>
                 </div>
                 <div className='mt-2'>

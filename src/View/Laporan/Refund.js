@@ -10,6 +10,7 @@ export default class Refund extends Component {
             <tr key={key}>
                 <td>{value.noRef}</td>
                 <td>{value.timeTrans}</td>
+                <td>{value.timeTrans}</td>
                 <td>{value.totalTrans}</td>
                 <td>{value.typeCard}</td>
                 <td>{value.typeTrans}</td>
@@ -37,17 +38,19 @@ export default class Refund extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='w-auto mt-4'>
-                <SelectOption name={'merchant'} data={['Kopi Kenangan', 'Janji Jiwa']} kelas={'w-auto'}/>
+                <div className='row mt-4'>
+                    <div className='col-md-2 col-xs-12'>
+                        <SelectOption name={'merchant'} data={['Kopi Kenangan', 'Janji Jiwa']} kelas={'w-100  dropdown-purple'}/>
+                    </div>
                 </div>
                 <div className='inputan mt-2 row'>
                     <div className='col-2'>
-                        <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
+                        <Input data={'cari'} placeholder={'Pecarian No Reff'} kelas={'mr-2'}/>
                     </div>
                     <div className='col-2'>
                         <SelectOption
                             name={'cari'}
-                            data={['7 Hari Terakhir', 'Hari Ini']}
+                            data={['7 hari terakhir', 'Hari ini','30 hari terakhir', 'custom']}
                             kelas={'mx-2'}/>
                     </div>
                     <div className='col-2'>
@@ -59,7 +62,7 @@ export default class Refund extends Component {
                     <div className='col-2'>
                         <SelectOption
                             name={'cari'}
-                            data={['Semua Metode Bayar', 'Bank Transfer']}
+                            data={['Semua metode bayar', 'Bank transfer']}
                             kelas={'mx-2'}/>
                     </div>
                 </div>
@@ -67,7 +70,7 @@ export default class Refund extends Component {
                     <Table 
                         data={td} 
                         th={[
-                            'No Ref','Waktu Transaksi','Total','Jenis Kartu','Jenis Transaksi',
+                            'No Ref','Waktu Transaksi','Waktu Refund','Total','Jenis Kartu','Jenis Transaksi',
                             'Terminal', 'MID', 'Trace Number', 'Batch Settlement','Aksi'
                         ]}
                         />

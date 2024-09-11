@@ -10,7 +10,7 @@ export default class Home extends Component {
                 <Title kelas={"mt-3"} data={"Dashboard"}/>
                 <div className="row">
                     <div className="col-md-2">
-                    <SelectOption data={['Kopi Kenangan','Janji Jiwa', 'Indomaret']} kelas={"mt-2"} name={"Merchant"} />
+                    <SelectOption data={['Kopi Kenangan','Janji Jiwa', 'Indomaret']} kelas={"mt-2 dropdown-purple"} name={"Merchant"} />
                     </div>
                     <div className="col-md-2">
                     <SelectOption 

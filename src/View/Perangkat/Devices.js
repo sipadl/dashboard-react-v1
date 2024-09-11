@@ -6,6 +6,7 @@ export default function Devices() {
 const dataTable = dataPerangkat;
     const td = dataTable.map((value,key) => (
         <tr key={key}>
+            <td style={{placeContent:'center'}}><input type="checkbox" /></td>
             <td>{value.sn}</td>
             <td>{value.tipePerangkat}</td>
             <td>{value.imei}</td>
@@ -14,11 +15,11 @@ const dataTable = dataPerangkat;
             <td>{value.sim}</td>
             <td>{value.tanggal}</td>
             <td>
-                <a className='mx-2 btn btn-transparent' href="/edit-device">
-                    <i className="bx bx-pencil"></i>
+                <a className='m-0 px-1 btn btn-transparent' href="/edit-device">
+                    <i className="bx bx-pencil" style={{color: '#979C9E'}}></i>
                 </a>
-                <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
-                    <i className="bx bx-trash"></i>
+                <button className='m-0 px-1 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                    <i className="bx bx-trash" style={{color: '#979C9E'}}></i>
                 </button>
             </td>
         </tr>
@@ -37,15 +38,15 @@ const dataTable = dataPerangkat;
             </div>
         </div>
         <div className='w-auto mt-4'>
-            <div className='row'>
+            {/* <div className='row'>
                 <div className='col-md-4 col-sm-12 col-xs-4 col-xs-12'>
                 <SelectOption name={'perangkat'} data={['EDC', 'Sound Box']} kelas={'w-100'}/>
                 </div>
-            </div>
+            </div> */}
             <div className='d-flex justify-content-between'>
                 <div className='row mt-4'>
                     <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
-                    <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
+                    <Input data={'cari'} placeholder={'Cari nomor SN'} kelas={'mr-2'}/>
                     </div>
                     <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                     <SelectOption name={'waktu'} data={['7 Hari Terakhir ', 'Hari Ini', '30 Hari Terakhir']} kelas={'w-100'}/>
@@ -63,7 +64,7 @@ const dataTable = dataPerangkat;
         </div>
         <div className='row mt-4'>
             <Table
-            th={['SN','Tipe Perangkat','IMEI','MID','TID','SIM','Tanggal Aktivasi','Aksi']}
+            th={[' ','SN','Tipe Perangkat','IMEI','MID','TID','SIM','Tanggal Aktivasi','Aksi']}
             data={td}/>
             <Pagination
                 itemsPerPage={10}

@@ -15,9 +15,13 @@ export default class Acquiring extends Component {
                 <td>{val.Mdr}</td>
                 <td>
                 {val.Status ? 
-                    <div className="status-ijo">Active</div>
-                    :
-                    <div className="status-merah">Inactive</div>
+                    <div className='body-status-ijo'>
+                        <div className="status-ijo">Active</div>
+                    </div>
+                        :
+                    <div className='body-status-merah'>
+                        <div className="status-merah">Inactive</div>
+                    </div>
                 }
                 </td>
             </tr>
@@ -39,8 +43,8 @@ export default class Acquiring extends Component {
                     </div>
                 </div>
                 <div className='w-25 mt-4'>
-                {/* <SelectOption name={'merchant'} data={['Kopi Kenangan', 'Janji Jiwa']} kelas={'w-auto'}/> */}
-                <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
+                {/* <SelectOption name={'merchant'} data={['Kopi Kenangan', 'Janji Jiwa']} kelas={'w-auto dropdown-purple'}/> */}
+                <Input data={'cari'} placeholder={'Cari ID Merchant'} kelas={'mr-2'}/>
                 </div>
                 {/* <div className='inputan mt-2 row'>
                     <div className='col-2'>
@@ -48,7 +52,7 @@ export default class Acquiring extends Component {
                     <div className='col-2'>
                         <SelectOption
                             name={'cari'}
-                            data={['7 Hari Terakhir', 'Hari Ini']}
+                            data={['7 hari terakhir', 'Hari ini','30 hari terakhir', 'custom']}
                             kelas={'mx-2'}/>
                     </div>
                     <div className='col-2'>
@@ -60,13 +64,13 @@ export default class Acquiring extends Component {
                     <div className='col-2'>
                         <SelectOption
                             name={'cari'}
-                            data={['Semua Metode Bayar', 'Bank Transfer']}
+                            data={['Semua metode bayar', 'Bank transfer']}
                             kelas={'mx-2'}/>
                     </div>
                 </div> */}
                 <div className='p-0 mt-3'>
                     <Table 
-                    th={['Merchant ID', 'Merchant Name','Tipe Bisnis',
+                    th={['ID Merchant', 'Nama Merchant','Tipe Bisnis',
                         'Nomor Akun','Kode Bank', 'MDR', 'Status'
                     ]}
                     data={datas}/>

@@ -7,19 +7,20 @@ export default class Pengguna extends Component {
     render() {
         const datax = dataPengguna.map((val, key) => (
             <tr key={key}>
+                <td style={{placeContent:'center'}}><input type="checkbox" /></td>
                 <td>{val.NamaPengguna}</td>
                 <td>{val.NamaLengkap}</td>
                 <td>{val.Email}</td>
                 <td>{val.Peran}</td>
                 <td>Selamanya</td>
                 <td>
-                    <a className='mx-2 btn btn-transparent' href="/edit-onboarding">
-                            <i className="bx bx-pencil"></i>
-                    </a>
-                    <button className='mx-2 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
-                        <i className="bx bx-trash"></i>
-                    </button>
-                </td>
+                <a className='m-0 px-1 btn btn-transparent' href="/edit-onboarding">
+                        <i className="bx bx-pencil" style={{color: '#979C9E'}} ></i>
+                </a>
+                <button className='m-0 px-1 btn btn-transparent' type='button' onClick={ () => (alert('Anda Yakin Menghapus Data ini ?'))}>
+                    <i className="bx bx-trash" style={{color: '#979C9E'}} ></i>
+                </button>
+            </td>
             </tr>
         ))
         return (
@@ -46,7 +47,7 @@ export default class Pengguna extends Component {
                 </div>
                 <div className='p-0 mt-3'>
                     <Table 
-                    th={['Nama Pengguna','Nama Lengkap','Email','Peran','Aktif Sampai','Aksi']}
+                    th={['','Nama Pengguna','Nama Lengkap','Email','Peran','Aktif Sampai','Aksi']}
                     data={datax}/>
                 </div>
                 <div className='mt-2'>
