@@ -68,7 +68,7 @@ export default class Refund extends Component {
                         data={td} 
                         th={[
                             'No Ref','Waktu Transaksi','Total','Jenis Kartu','Jenis Transaksi',
-                            'Terminal', 'MID', 'Trace Number', 'Batch Settlement'
+                            'Terminal', 'MID', 'Trace Number', 'Batch Settlement','Aksi'
                         ]}
                         />
                 </div>

@@ -13,7 +13,7 @@ export const Menus = [
         items: ['Perangkat', 'QR Soundbox', 'EDC']
     }, 
     {
-        title: 'Issuser',
+        title: 'Issuer',
         icon: <i className='bx bx-store mx-1' ></i>,
         items: [],
 
