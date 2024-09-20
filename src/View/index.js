@@ -29,8 +29,10 @@ import TambahSound from "./Perangkat/Detail/TambahSound";
 import EditSound from "./Perangkat/Detail/EditSound";
 import TambahBiayaBaru from "./Pengaturan/Optional/TambahBiayaBaru";
 import EditBiayaBaru from "./Pengaturan/Optional/EditBiayaBaru";
+import TambahOnboard from "./Onboarding/Detail/TambahOnboard";
 
 export {
+    TambahOnboard,
     EditBiayaBaru,
     TambahBiayaBaru,
     TambahSound,

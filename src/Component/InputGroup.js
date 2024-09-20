@@ -1,22 +1,25 @@
 import React from 'react'
 
-export default function InputGroup({title, name, value, readonly, disabled, placeholder, textarea ,tipe}) {
+export default function InputGroup({ title, name, placeholder, value, onChange, onBlur, type = "text", disabled, readonly, textarea = false}) {
   return (
     <div className="form-group row mt-3">
         <label for="input" className="label-for-col col-12 h6">{title}</label>
         <div className="col-12">
         {!textarea ? 
         <input
-        type={tipe ? tipe : "text"}
+        type={type}
         name={name}
-        disabled={disabled}
-        id="input"
+        id={name}
         className="form-control p-2"
         placeholder={placeholder}
-        readonly={readonly}
-        value={value}/>
+        disabled={disabled}
+        readOnly={readonly}
+        value={value} // bind Formik's value
+        onChange={onChange} // bind Formik's handleChange
+        onBlur={onBlur} // bind Formik's handleBlur
+        />
         :
-        <textarea name={name} readonly={readonly} placeholder={placeholder} className="form-control p-2" rows="3" disabled={disabled}>{value}</textarea>
+        <textarea name={name} readonly={readonly} onChange={onChange} onBlur={onBlur} placeholder={placeholder} className="form-control p-2" rows="3" disabled={disabled}>{value}</textarea>
         }
         </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void, UbahKataSandi, Onboarding, DetailVoid, DetailRefund, DetailSettlement, TambahDevice, EditDevice, TambahEdc, EditEdc, TambahSound, EditSound, TambahBiayaBaru, EditBiayaBaru} from './View'
+import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void, UbahKataSandi, Onboarding, DetailVoid, DetailRefund, DetailSettlement, TambahDevice, EditDevice, TambahEdc, EditEdc, TambahSound, EditSound, TambahBiayaBaru, EditBiayaBaru, TambahOnboard} from './View'
 
 export default class Index extends Component {
   render() {
@@ -38,7 +38,7 @@ export default class Index extends Component {
                 <Route path="/peran" element={<Peran />} />
                 <Route path="/merchant_discount_rate" element={<MDR />} />
                 <Route path="/biaya_tambahan" element={<BiayaTambahan />} />
-
+                <Route path="/tambah_merchant" element={<TambahOnboard />} />
             </Routes>
         </BrowserRouter>
     )

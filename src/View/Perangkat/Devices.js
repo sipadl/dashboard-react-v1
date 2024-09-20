@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title } from '../../Component';
 import { dataPerangkat } from '../../Lib/Datas';
+import axios from 'axios';
+
 
 export default function Devices() {
-const dataTable = dataPerangkat;
-    const td = dataTable.map((value,key) => (
+const [data, setData] = useState([]);
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+        const response = await axios.get('http://47.254.142.62:8081/api/devices/get');
+            setData(response.data.data);
+            console.log(response)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    fetchData();
+}, []);
+    const td = data.map((value,key) => (
         <tr key={key}>
             <td style={{placeContent:'center'}}><input type="checkbox" /></td>
-            <td>{value.sn}</td>
+            <td>{value.serialNumber}</td>
             <td>{value.tipePerangkat}</td>
-            <td>{value.imei}</td>
+            <td>{value.imeiNumber}</td>
             <td>{value.mid}</td>
             <td>{value.tid}</td>
-            <td>{value.sim}</td>
-            <td>{value.tanggal}</td>
+            <td>{value.sim ?? '010203'}</td>
+            <td>{value.tanggalActive}</td>
             <td>
                 <a className='m-0 px-1 btn btn-transparent' href="/edit-device">
                     <i className="bx bx-pencil" style={{color: '#979C9E'}}></i>

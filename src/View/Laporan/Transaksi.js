@@ -2,9 +2,26 @@ import React, {Component} from 'react'
 import {Breadcrumb, ExportButton, Input, Pagination, SelectOption, Table, Title} from '../../Component'
 import {Button} from 'react-bootstrap'
 import { tableOne } from '../../Lib/Datas';
+import axios from 'axios';
 
 export default class Transaksi extends Component {
+    
+    componentDidMount() {
+        const fetchData = async () => {
+          try {
+            const res = await axios.get('http://47.254.142.62:8081/api/transaksi/get');
+            console.log(res)
+            this.setState({ data: res.data, loading: false });
+          } catch (error) {
+            this.setState({ error: error.message, loading: false });
+          }
+        };
+    
+        fetchData();
+      }
+
     render() {
+        console.log(this.state)
         const dataTable = tableOne;
         const td = dataTable.map((value, key) => (
             <tr key={key}>

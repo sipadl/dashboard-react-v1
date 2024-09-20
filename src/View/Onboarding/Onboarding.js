@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Breadcrumb, ExportButton, Input, Pagination, Table, Title } from '../../Component';
 import { dataOnboarding } from '../../Lib/Datas';
+import axios from "axios";
 
 export default function Onboarding() {
-    const datax = dataOnboarding.map((val, key) => (
+    const [merchant, setMerchant] = useState([])
+    useEffect(() => {
+        const fectData = async () => {
+            try {
+                const res = await axios.get('http://47.254.142.62:8081/api/merchant/get');
+                setMerchant(res.data.data);
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+
+        fectData();
+    },[])
+
+
+    const datax = merchant.map((val, key) => (
         <tr key={key}>
             <td style={{placeContent:'center'}}><input type="checkbox" /></td>
             <td>
-                <img width={50} src={val.logo} />
+                <img width={50} src={'https://w7.pngwing.com/pngs/83/913/png-transparent-coffee-espresso-tea-cafe-starbucks-starbucks-logo-material-other-free-logo-design-template-trademark.png'} />
             </td>
-            <td>{val.name}</td>
-            <td>{val.tipeBisnis}</td>
-            <td>{val.telp}</td>
+            <td>{val.merchantName}</td>
+            <td>{val.merchantType}</td>
+            <td>{val.phone}</td>
             <td>{val.email}</td>
             <td>
-            {val.Status ? 
+            {val.status == 1 ? 
                     <div className='body-status-ijo'>
                         <div className="status-ijo">Active</div>
                     </div>
@@ -56,9 +73,9 @@ export default function Onboarding() {
                    
                 </div>
                 <div className='align-self-end'>
-                    <button type="button" className='btn btn-light btn-sm btn-purple'>
+                    <a href="tambah_merchant" className='btn btn-light btn-sm btn-purple'>
                         + Tambah Onboarding
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
