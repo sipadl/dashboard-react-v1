@@ -30,8 +30,10 @@ import EditSound from "./Perangkat/Detail/EditSound";
 import TambahBiayaBaru from "./Pengaturan/Optional/TambahBiayaBaru";
 import EditBiayaBaru from "./Pengaturan/Optional/EditBiayaBaru";
 import TambahOnboard from "./Onboarding/Detail/TambahOnboard";
+import EditIssuer from "./Issuser/EditIssuer";
 
 export {
+    EditIssuer,
     TambahOnboard,
     EditBiayaBaru,
     TambahBiayaBaru,

@@ -8,7 +8,7 @@ export default function TambahDevice() {
         <div>
             <Breadcrumb before={"Manajemen Perangkat"} after={"Tambah Perangkat"}/>
             <div className="mt-4 h2 text-halaman-detail">Tambah Perangkat</div>
-            <div className="mt-5 h5 text-halaman-detail-small">Informasi Dasar</div>
+            <div className="mt-4 h5 text-halaman-detail-small">Informasi Dasar</div>
             <small>Informasi dasar perangkat</small>
             <Formik
                 initialValues={{
@@ -35,7 +35,7 @@ export default function TambahDevice() {
                 {
                     ({values, handleChange, handleBlur, handleSubmit}) => (
                         <Form onSubmit={handleSubmit}>
-                            <div className="mt-6 row">
+                            <div className="mt-4 row">
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
                                         title={"Tipe Perangkat *"}

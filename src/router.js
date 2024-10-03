@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void, UbahKataSandi, Onboarding, DetailVoid, DetailRefund, DetailSettlement, TambahDevice, EditDevice, TambahEdc, EditEdc, TambahSound, EditSound, TambahBiayaBaru, EditBiayaBaru, TambahOnboard} from './View'
+import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void, UbahKataSandi, Onboarding, DetailVoid, DetailRefund, DetailSettlement, TambahDevice, EditDevice, TambahEdc, EditEdc, TambahSound, EditSound, TambahBiayaBaru, EditBiayaBaru, TambahOnboard, EditIssuer} from './View'
 
 export default class Index extends Component {
   
@@ -11,9 +11,9 @@ export default class Index extends Component {
                 <Route path="/" element={<Login />} />
                 <Route path="/daftar" element={<Daftar />} />
                 <Route path="/onboarding" element={<Onboarding />} />
-                <Route path="/detail-void" element={<DetailVoid />} />
-                <Route path="/detail-refund" element={<DetailRefund />} />
-                <Route path="/detail-settlement" element={<DetailSettlement />} />
+                <Route path="laporan/detail-void" element={<DetailVoid />} />
+                <Route path="laporan/detail-refund" element={<DetailRefund />} />
+                <Route path="laporan/detail-settlement" element={<DetailSettlement />} />
                 <Route path="/tambah-device" element={<TambahDevice />} />
                 <Route path="/edit-device" element={<EditDevice />} />
                 <Route path="/tambah-edc" element={<TambahEdc />} />
@@ -33,7 +33,9 @@ export default class Index extends Component {
                 <Route path="managmenet_perangkat/qr_soundbox" element={<SoundBox />} />
                 <Route path="managmenet_perangkat/edc" element={<Edc />} />
                 <Route path="/issuer" element={<Issuser />} />
-                <Route path="/void" element={<Void />} />
+                <Route path="/tambah-issuer" element={<EditIssuer />} />
+                <Route path="/edit-issuer" element={<EditIssuer />} />
+                <Route path="laporan/void" element={<Void />} />
                 <Route path="/acquiring" element={<Acquiring />} />
                 <Route path="pengguna_&_peran/pengguna" element={<Pengguna />} />
                 <Route path="pengguna_&_peran/peran" element={<Peran />} />

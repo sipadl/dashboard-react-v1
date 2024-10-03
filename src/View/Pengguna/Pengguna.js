@@ -36,7 +36,7 @@ export default class Pengguna extends Component {
                 <div className='d-flex justify-content-between'>
 
                     <div className='w-25 mt-4'>
-                        <Input data={'cari'} placeholder={'Pecarian'} kelas={'mr-2'}/>
+                        <Input data={'cari'} placeholder={'Cari nama pengguna'} kelas={'mr-2'}/>
                     </div>
                     <div>
                         <button className='btn btn-sm btn-purple btn-light mt-4'> 

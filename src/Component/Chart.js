@@ -45,8 +45,8 @@ const Chart = ({name}) => {
                     220
                 ],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1
+                borderColor: '#5413D6',
+                tension: 0.6
             }
         ]
     };
@@ -65,7 +65,7 @@ const Chart = ({name}) => {
     };
 
     return (
-      <div className='card-dashbord p-4 mt-4 row'>
+      <div className='card-dashbord p-4 mt-4 row mx-0'>
         <div className='col-md-12'>
       {/* <div className='text-pie-chart'>{name}</div> */}
         <div className='head-chart-title'>{name}</div>

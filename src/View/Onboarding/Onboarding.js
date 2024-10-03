@@ -26,7 +26,9 @@ export default function Onboarding() {
             <td>
                 <img width={50} src={'https://w7.pngwing.com/pngs/83/913/png-transparent-coffee-espresso-tea-cafe-starbucks-starbucks-logo-material-other-free-logo-design-template-trademark.png'} />
             </td>
+
             <td>{val.merchantName}</td>
+            <td>{val.id}</td>
             <td>{val.merchantType}</td>
             <td>{val.phone}</td>
             <td>{val.email}</td>
@@ -81,7 +83,7 @@ export default function Onboarding() {
         </div>
         <div className='row mt-4'>
             <Table 
-            th={[' ','Logo','Nama','Tipe Bisnis','Telpon','Email','Status','Aksi']}
+            th={[' ','Logo','Nama Merchant','ID Merchant','Tipe Bisnis','Telpon','Email','Status','Aksi']}
             data={datax}/>
             <Pagination
                 itemsPerPage={10}

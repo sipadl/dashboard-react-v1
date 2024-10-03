@@ -6,9 +6,9 @@ export default function EditSound() {
     <div>
       <Breadcrumb before={"Manajemen Perangkat"} after={"Tambah SoundBox"} />
       <div className="mt-4 h2 text-halaman-detail">Tambah SoundBox</div>
-      <div className="mt-5 h5 text-halaman-detail-small">Informasi Dasar</div>
+      <div className="mt-4 h5 text-halaman-detail-small">Informasi Dasar</div>
       <small>Informasi dasar SoundBox</small>
-      <div className="mt-6 row">
+      <div className="mt-4 row">
         <div className="col-md-6 col xs-12">
           <InputGroup
             title={"Tipe Perangkat *"}

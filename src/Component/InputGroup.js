@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function InputGroup({ title, name, placeholder, value, onChange, onBlur, type = "text", disabled, readonly, textarea = false}) {
+export default function InputGroup({ title, name, placeholder, value, onChange, onBlur, type = "text", disabled, readonly, textarea = false, isRequired = false }) {
   return (
     <div className="form-group row mt-3">
-        <label for="input" className="label-for-col col-xs-12 col-md-12 h6">{title}</label>
+        <label for="input" className="label-for-col col-xs-12 col-md-12 h6">{title} {isRequired ? <span className="text-danger">*</span> : ''}</label>
         <div className="col-xs-12 col-md-12">
         {!textarea ? 
         <input

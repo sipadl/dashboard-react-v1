@@ -16,6 +16,9 @@ export default function Table({ data, th }) {
         <tbody>
              {data}
         </tbody>
+        <tfoot>
+          
+        </tfoot>
       </table>
     </div>
   );

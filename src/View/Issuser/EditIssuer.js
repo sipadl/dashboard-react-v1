@@ -1,0 +1,138 @@
+import React from 'react';
+import { Breadcrumb, InputGroup, PaymentMethod, SelectOption } from '../../Component';
+import { Form, Formik } from 'formik';
+import axios from 'axios';
+
+export default function EditIssuer() {
+  return (
+    <>
+      <Breadcrumb after={'Issuser'}/>
+      <div className="mt-4 h2 text-halaman-detail">Edit Issuer</div>
+      <div className="mt-4 h5 text-halaman-detail-small">Informasi Dasar</div>
+      <small>Informasi dasar issuer</small>
+      <div>
+        <Formik
+          initialValues={{
+            nama: '',
+            kodeUser: '',
+            namapic: '',
+            email: '',
+            telepon: '',
+            metode: '',
+            alamat : '',
+            status: 1
+          }}
+          onSubmit={async (value) => {
+            try {
+              const res = await axios.post('http://47.254.142.62:8081/api/merchant/create', value);
+              console.log(res);
+              window.location.href = '/onboarding';
+            } catch (error) {
+              console.log(error);
+            }
+          }}
+        >
+          {({ values, handleChange, handleBlur, handleSubmit }) => (
+            <Form onSubmit={handleSubmit}>
+              <div className="mt-4 row">
+                <div className="col-md-6 col-xs-12">
+                  <InputGroup
+                    title={"Nama"}
+                    isRequired={true}
+                    name={"mid"}
+                    placeholder={"Nama"}
+                    value={values.nama}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <div className="col-md-6 col-xs-12">
+                  <InputGroup
+                    title={"Kode User"}
+                    isRequired={true}
+                    name={"mid"}
+                    placeholder={"Kode User"}
+                    value={values.kodeUser}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <div className="col-md-6 col-xs-12">
+                  <InputGroup
+                    title={"Nama PIC"}
+                    isRequired={true}
+                    name={"mid"}
+                    placeholder={"Nama PIC"}
+                    value={values.namapic}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <div className="col-md-6 col-xs-12">
+                  <InputGroup
+                    title={"Email"}
+                    isRequired={true}
+                    name={"mid"}
+                    type={'email'}
+                    placeholder={"Email"}
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <div className="col-md-6 col-xs-12">
+                  <InputGroup
+                    title={"Telepon"}
+                    isRequired={true}
+                    name={"mid"}
+                    placeholder={"Telepon"}
+                    value={values.telepon}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <div className="col-md-6 col-xs-12">
+                    <div className="form-group row mt-3">
+                        <label for="input" className="label-for-col col-xs-12 col-md-12 h6">Status
+                            <span className="text-danger">*</span>
+                        </label>
+                        <div className="col-xs-12 col-md-12">
+                            <SelectOption
+                                data={['Aktif', 'Non aktif']}
+                                title={"status"}
+                                isRequired={true}
+                                name={"mid"}
+                                placeholder={"status"}
+                                value={values.status}
+                                onChange={handleChange}
+                                onBlur={handleBlur}/>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6 col-xs-12">
+                  <PaymentMethod />
+                </div>
+                <div className="col-md-6 col-xs-12">
+                  <InputGroup
+                    textarea={true}
+                    title={"Alamat"}
+                    isRequired={true}
+                    name={"mid"}
+                    placeholder={"alamat"}
+                    value={values.alamat}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                {/* Add more form fields here as needed */}
+              </div>
+              <button type="submit" className="btn btn-primary mt-3">
+                Submit
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </>
+  );
+}

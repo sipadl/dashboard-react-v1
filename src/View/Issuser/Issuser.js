@@ -13,7 +13,7 @@ import {dataMerchant, tableOne} from '../../Lib/Datas';
 export default function Issuser() {
     const td = dataMerchant.map((val , key) => (
         <tr key={key}>
-            <td>{key}</td>
+            <td>{key+1}</td>
             <td><img src={val.images} /></td>
             <td>{val.name}</td>
             <td>{val.kodeIssuser}</td>
@@ -57,13 +57,14 @@ export default function Issuser() {
                 </div>
             </div>
             <div className='w-auto mt-4'>
-                <div className='row'>
+                {/* <div className='row'>
                     <div className='col-md-2 col-sm-12 col-xs-2 col-xs-12'>
                         <SelectOption name={'perangkat'} data={['EDC', 'Soundbox']} kelas={'w-100'}/>
                     </div>
-                </div>
+                </div> */}
                 <div className='d-flex justify-content-between'>
-                    <div className='row mt-4'>
+                    <div></div>
+                    {/* <div className='row mt-4'>
                         <div className='col-md-4 col-xl-4 col-sm-12 col-xs-12'>
                             <Input data={'cari'} placeholder={'Cari nama issuer'} kelas={'mr-2'}/>
                         </div>
@@ -79,11 +80,11 @@ export default function Issuser() {
                                 data={['Semua cabang', 'Jakarta timur', 'Jakarta selatan', 'Jakarta barat']}
                                 kelas={'w-100'}/>
                         </div>
-                    </div>
+                    </div> */}
                     <div className='align-self-end'>
-                        <button type="button" className='btn btn-light btn-sm btn-purple'>
+                        <a href="/tambah-issuer" className='btn btn-light btn-sm btn-purple'>
                             + Tambah Issuer
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

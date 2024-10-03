@@ -4,14 +4,39 @@ import {Button} from 'react-bootstrap'
 import { tableOne } from '../../Lib/Datas';
 import axios from 'axios';
 
+
+
+const traceJenisTransaksi = (val) =>  {
+    switch (val) {
+      case '1':
+        return 'Debit';
+      case '2':
+        return 'Kredit';
+      case '3':
+        return 'QR Static';
+      case '4':
+        return 'QR Dynamic';
+      default:
+        return 'Unknown';
+    }
+  }
 export default class Transaksi extends Component {
-    
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataTrans: [], // initial state
+            loading: true, // set loading state
+            error: null,  // initial state
+        };
+      }
+
     componentDidMount() {
         const fetchData = async () => {
           try {
             const res = await axios.get('http://47.254.142.62:8081/api/transaksi/get');
             console.log(res)
-            this.setState({ data: res.data, loading: false });
+            this.setState({ dataTrans: res.data.data, loading: false });
           } catch (error) {
             this.setState({ error: error.message, loading: false });
           }
@@ -19,21 +44,22 @@ export default class Transaksi extends Component {
     
         fetchData();
       }
+    
+     
 
     render() {
-        console.log(this.state)
-        const dataTable = tableOne;
-        const td = dataTable.map((value, key) => (
+        const { dataTrans } = this.state
+        const td = dataTrans.map((value, key) => (
             <tr key={key}>
-                <td>{value.noRef}</td>
-                <td>{value.timeTrans}</td>
-                <td>{value.totalTrans}</td>
-                <td>{value.typeCard}</td>
-                <td>{value.typeTrans}</td>
+                <td>{value.noReff}</td>
+                <td>{value.waktuTransaksi}</td>
+                <td>{value.total}</td>
+                <td>{value.tipeKartu ?? '-'}</td>
+                <td>{traceJenisTransaksi(value.jenisTransaksi)}</td>
                 <td>{value.terminal}</td>
                 <td>{value.mid}</td>
-                <td>{value.trackNumber}</td>
-                <td>{value.batch}</td>
+                <td>{value.traceNumber}</td>
+                <td>{value.batch ?? 0}</td>
             </tr>
         ));
         

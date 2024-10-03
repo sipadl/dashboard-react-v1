@@ -6,9 +6,9 @@ export default function TambahBiayaBaru() {
     <div>
       <Breadcrumb before={"Pengaturan"} after={"Tambah Biaya Tambahan"} />
       <div className="mt-4 h2 text-halaman-detail">Tambah Biaya Tambahan</div>
-      <div className="mt-5 h5 text-halaman-detail-small">Informasi Dasar</div>
+      <div className="mt-4 h5 text-halaman-detail-small">Informasi Dasar</div>
       <small>Informasi dasar Biaya Tambahan</small>
-      <div className="mt-6 row">
+      <div className="mt-4 row">
         <div className="col-md-6 col xs-12">
           <InputGroup
             title={"Nama Biaya Tambahan *"}

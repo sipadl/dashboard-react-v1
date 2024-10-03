@@ -16,7 +16,7 @@ export default function Login() {
             <div className="row justify-content-center">
                 <ImageKiri />
                 <div className="col-md-6 col-xs-12 align-self-center">
-                    <div className="isi mx-5 w-75">
+                    <div className="isi mx-5">
                     <div className="text-center">
                     <img className='w-50' src={Thumbnail}/>
                     <div className='h1'>Masuk</div>
@@ -35,7 +35,7 @@ export default function Login() {
                         </div>
                         {/* for Production */}
                         {/* <button className="btn btn-sm btn-purple w-100 mt-4">Masuk</button> */}
-                        <a href="/dashbor" className="btn btn-sm btn-purple-masuk w-100 mt-4">Masuk</a>
+                        <a href="/dashboard" className="btn btn-sm btn-purple-masuk w-100 mt-4">Masuk</a>
                     </form>
                     <div className="text-center mt-1">
                     <span className="text-gray">Belum punya akun ? <a className="text-purple" href="/daftar">Daftar sekarang</a></span>
