@@ -20,6 +20,7 @@ function App() {
                 <div className='p-3'>
                 <Route/>
                 </div>
+                <div className='mx-2'>© 2023 AMS. All Rights Reserved.</div>
             </div>
         </div>
     );

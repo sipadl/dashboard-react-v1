@@ -29,16 +29,16 @@ export default function Login() {
                         <div className="d-flex justify-content-between mt-3">
                             <div>
                                 <input type="checkbox" className="mx-1"/>
-                                Ingat Saya
+                                Ingat saya
                             </div>
-                            <a className="text-gray" href="lupa-password">Lupa Kata Sandi</a>
+                            <a className="text-gray" href="lupa-password">Lupa kata sandi</a>
                         </div>
                         {/* for Production */}
                         {/* <button className="btn btn-sm btn-purple w-100 mt-4">Masuk</button> */}
-                        <a href="/dashbor" className="btn btn-sm btn-purple w-100 mt-4">Masuk</a>
+                        <a href="/dashbor" className="btn btn-sm btn-purple-masuk w-100 mt-4">Masuk</a>
                     </form>
                     <div className="text-center mt-1">
-                    <span className="text-gray">Belum Memiliki Akun ? <a className="text-purple" href="/daftar">Daftar Sekarang</a></span>
+                    <span className="text-gray">Belum punya akun ? <a className="text-purple" href="/daftar">Daftar sekarang</a></span>
                     </div>
                     </div>
                 </div>

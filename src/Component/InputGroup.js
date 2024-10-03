@@ -3,8 +3,8 @@ import React from 'react'
 export default function InputGroup({ title, name, placeholder, value, onChange, onBlur, type = "text", disabled, readonly, textarea = false}) {
   return (
     <div className="form-group row mt-3">
-        <label for="input" className="label-for-col col-12 h6">{title}</label>
-        <div className="col-12">
+        <label for="input" className="label-for-col col-xs-12 col-md-12 h6">{title}</label>
+        <div className="col-xs-12 col-md-12">
         {!textarea ? 
         <input
         type={type}

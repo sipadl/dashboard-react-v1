@@ -11,7 +11,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
         <nav>
             <ul className="pagination">
                 {pageNumbers.map(number => (
-                    <li key={number} className={`page-item ${currentPage === number ? 'active' : ''}`}>
+                    <li key={number} className={`page-item ${currentPage == number ? 'active' : ''}`}>
                         <button onClick={() => paginate(number)} className="page-link">
                             {number}
                         </button>

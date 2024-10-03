@@ -31,31 +31,31 @@ export default class Metode extends Component {
                     </div>
                 </div>
                 <div className='inputan mt-2 row'>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <Input data={'cari'} placeholder={'Pecarian No Reff'} kelas={'mr-2'}/>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <SelectOption
                             name={'cari'}
                             data={['7 hari terakhir', 'Hari ini','30 hari terakhir', 'custom']}
-                            kelas={'mx-2'}/>
+                            kelas={''}/>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <SelectOption
                             name={'cari'}
                             data={['Semua Cabang', 'Cabang 1', 'Cabang 2']}
-                            kelas={'mx-2'}/>
+                            kelas={''}/>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <SelectOption
                             name={'cari'}
                             data={['Semua metode bayar', 'Bank transfer']}
-                            kelas={'mx-2'}/>
+                            kelas={''}/>
                     </div>
                 </div>
                 <div className='p-0 mt-3'>
                     <Table 
-                    th={['Metode Pembayaran','Kuantitas','SubTotal']}
+                    th={['Metode Pembayaran','Kuantitas','Subtotal']}
                     data={td}/>
                 </div>
                 <div className='mt-2'>

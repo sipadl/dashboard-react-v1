@@ -39,7 +39,7 @@
     transition: background-color 0.3s;
 }
 
-.sidebar-link.active {
+.sidebar-link.clicked {
     color: #6B4EFF !important;
     background-color: #E7E7FF;
 }
@@ -108,6 +108,13 @@ word-wrap: break-word
 .btn-purple {
     background-color: rgb(107,78,255) !important;
     color: white !important;
+    padding: 0.7rem !important;
+    border-radius: 12px !important;
+}
+.btn-purple-masuk {
+    background-color: rgb(107,78,255) !important;
+    color: white !important;
+    font-height: 600 medium;
     padding: 0.7rem !important;
     border-radius: 12px !important;
 }

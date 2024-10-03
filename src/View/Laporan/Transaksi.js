@@ -52,31 +52,31 @@ export default class Transaksi extends Component {
                     </div>
                 </div>
                 <div className='row mt-4'>
-                    <div className='col-md-2 col-xs-12'>
+                    <div className='col-md-6 col-xl-2 col-xs-12'>
                         <SelectOption name={'merchant'} data={['Kopi Kenangan', 'Janji Jiwa']} kelas={'w-100  dropdown-purple'}/>
                     </div>
                 </div>
                 <div className='inputan mt-2 row'>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <Input data={'cari'} placeholder={'Pecarian No Reff'} kelas={'mr-2'}/>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <SelectOption
                             name={'cari'}
                             data={['7 hari terakhir', 'Hari ini','30 hari terakhir', 'custom']}
-                            kelas={'mx-2'}/>
+                            kelas={''}/>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <SelectOption
                             name={'cari'}
                             data={['Semua Cabang', 'Cabang 1', 'Cabang 2']}
-                            kelas={'mx-2'}/>
+                            kelas={''}/>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-xl-2 col-md-6 col-xs-12 mt-2 mx-0'>
                         <SelectOption
                             name={'cari'}
                             data={['Semua metode bayar', 'Bank transfer']}
-                            kelas={'mx-2'}/>
+                            kelas={''}/>
                     </div>
                 </div>
                 <div className='p-0 mt-3'>

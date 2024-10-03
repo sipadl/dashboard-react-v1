@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { Acquiring, BiayaTambahan, Daftar, Devices, Edc, Home, Issuser, Login, LupaPassword, MDR, Metode, Pengguna, Peran, Refund, Settlement, SoundBox, Transaksi, Void, UbahKataSandi, Onboarding, DetailVoid, DetailRefund, DetailSettlement, TambahDevice, EditDevice, TambahEdc, EditEdc, TambahSound, EditSound, TambahBiayaBaru, EditBiayaBaru, TambahOnboard} from './View'
 
 export default class Index extends Component {
+  
   render() {
     return (
         <BrowserRouter>
@@ -23,21 +24,21 @@ export default class Index extends Component {
                 <Route path="/edit-edc" element={<EditEdc />} />
                 <Route path="/lupa-password" element={<LupaPassword />} />
                 <Route path="/ubah-password" element={<UbahKataSandi />} />
-                <Route path="/dashbor" element={<Home />} />
-                <Route path="/transaksi" element={<Transaksi />} />
-                <Route path="/metode_pembayaran" element={<Metode />} />
-                <Route path="/refund" element={<Refund />} />
-                <Route path="/settlement" element={<Settlement />} />
-                <Route path="/perangkat" element={<Devices />} />
-                <Route path="/qr_soundbox" element={<SoundBox />} />
-                <Route path="/edc" element={<Edc />} />
+                <Route path="/dashboard" element={<Home />} />
+                <Route path="laporan/transaksi" element={<Transaksi />} />
+                <Route path="laporan/metode_pembayaran" element={<Metode />} />
+                <Route path="laporan/refund" element={<Refund />} />
+                <Route path="laporan/settlement" element={<Settlement />} />
+                <Route path="managmenet_perangkat/perangkat" element={<Devices />} />
+                <Route path="managmenet_perangkat/qr_soundbox" element={<SoundBox />} />
+                <Route path="managmenet_perangkat/edc" element={<Edc />} />
                 <Route path="/issuer" element={<Issuser />} />
                 <Route path="/void" element={<Void />} />
                 <Route path="/acquiring" element={<Acquiring />} />
-                <Route path="/pengguna" element={<Pengguna />} />
-                <Route path="/peran" element={<Peran />} />
-                <Route path="/merchant_discount_rate" element={<MDR />} />
-                <Route path="/biaya_tambahan" element={<BiayaTambahan />} />
+                <Route path="pengguna_&_peran/pengguna" element={<Pengguna />} />
+                <Route path="pengguna_&_peran/peran" element={<Peran />} />
+                <Route path="pengaturan/merchant_discount_rate" element={<MDR />} />
+                <Route path="pengaturan/biaya_tambahan" element={<BiayaTambahan />} />
                 <Route path="/tambah_merchant" element={<TambahOnboard />} />
             </Routes>
         </BrowserRouter>
