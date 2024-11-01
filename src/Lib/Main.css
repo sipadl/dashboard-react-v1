@@ -765,3 +765,25 @@ textarea {
 body {
     font-family: 'Inter', sans-serif !important;
 }
+
+
+.pagination-controls {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    font-size: 14px;
+    gap: 5px;
+  }
+  
+  .pagination-controls button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .pagination-controls button.active {
+    background-color: #E7E7FF;
+    color: #6B4EFF;
+    border-radius: 8px !important;
+    font-weight: bold;
+  }
+  

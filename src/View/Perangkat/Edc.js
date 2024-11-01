@@ -68,12 +68,7 @@ const dataTable = dataPerangkat;
             <Table
             th={['','SN','Tipe Perangkat','IMEI','MID','TID','SIM','Tanggal Aktivasi','Aksi']}
             data={td}/>
-            <Pagination
-                itemsPerPage={10}
-                totalItems={50}
-                paginate={5}
-                currentPage={2}
-            />
+              
         {/* <table className='col-md-12 table table-responsive table-bordered' >
             <thead>
                 <th>

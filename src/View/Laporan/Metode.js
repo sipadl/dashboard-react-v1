@@ -59,12 +59,7 @@ export default class Metode extends Component {
                     data={td}/>
                 </div>
                 <div className='mt-2'>
-                <Pagination
-                itemsPerPage={10}
-                totalItems={50}
-                paginate={5}
-                currentPage={2}
-                />
+                 
                 </div>
             </div>
         )

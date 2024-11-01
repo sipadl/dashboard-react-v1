@@ -85,12 +85,7 @@ export default function Onboarding() {
             <Table 
             th={[' ','Logo','Nama Merchant','ID Merchant','Tipe Bisnis','Telpon','Email','Status','Aksi']}
             data={datax}/>
-            <Pagination
-                itemsPerPage={10}
-                totalItems={50}
-                paginate={5}
-                currentPage={2}
-            />
+              
         </div>
     </div>
   )
