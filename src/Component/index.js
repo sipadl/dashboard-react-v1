@@ -14,8 +14,11 @@ import ActiveBadge from "./ActiveBadge"
 import Chart from "./Chart"
 import InputGroup from "./InputGroup"
 import PaymentMethod from "./PaymentContainer"
+import FeeTable from "./FeeTable"
+
 
 export { 
+    FeeTable,
     PaymentMethod,
     InputGroup,
     ActiveBadge,

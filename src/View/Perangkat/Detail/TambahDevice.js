@@ -38,7 +38,8 @@ export default function TambahDevice() {
                             <div className="mt-4 row">
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Tipe Perangkat *"}
+                                        title={"Tipe Perangkat"}
+                                        isRequired={true}
                                         name={"tipePerangkat"}
                                         placeholder={"Tipe Perangkat"}
                                         value={values.tipePerangkat}
@@ -47,7 +48,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"SN *"}
+                                        title={"SN"}
+                                        isRequired={true}
                                         name={"serialNumber"}
                                         placeholder={"SN"}
                                         value={values.serialNumber}
@@ -56,7 +58,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"IMEI *"}
+                                        title={"IMEI"}
+                                        isRequired={true}
                                         name={"imeiNumber"}
                                         placeholder={"IMEI"}
                                         value={values.imeiNumber}
@@ -65,7 +68,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"SIM *"}
+                                        title={"SIM"}
+                                        isRequired={true}
                                         name={"simCardNumber"}
                                         placeholder={"SIM"}
                                         value={values.simCardNumber}
@@ -74,7 +78,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Koneksi *"}
+                                        title={"Koneksi"}
+                                        isRequired={true}
                                         name={"koneksi"}
                                         placeholder={"Koneksi"}
                                         value={values.koneksi}
@@ -83,7 +88,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Kesehatan Baterai *"}
+                                        title={"Kesehatan Baterai"}
+                                        isRequired={true}
                                         name={"battery"}
                                         placeholder={"Kesehatan Baterai"}
                                         value={values.battery}
@@ -92,7 +98,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Printer *"}
+                                        title={"Printer"}
+                                        isRequired={true}
                                         name={"printer"}
                                         placeholder={"Printer"}
                                         value={values.printer}
@@ -101,7 +108,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Longitude *"}
+                                        title={"Longitude"}
+                                        isRequired={true}
                                         name={"longitude"}
                                         placeholder={"Longitude"}
                                         value={values.longitude}
@@ -110,7 +118,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Latitude *"}
+                                        title={"Latitude"}
+                                        isRequired={true}
                                         name={"latitude"}
                                         placeholder={"Latitude"}
                                         value={values.latitude}
@@ -119,7 +128,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Tanggal Aktivasi *"}
+                                        title={"Tanggal Aktivasi"}
+                                        isRequired={true}
                                         tipe={"date"}
                                         name={"tanggalActive"}
                                         placeholder={"Tanggal Aktivasi"}
@@ -129,7 +139,8 @@ export default function TambahDevice() {
                                 </div>
                                 <div className="col-md-6 col xs-12">
                                     <InputGroup
-                                        title={"Alamat *"}
+                                        title={"Alamat"}
+                                        isRequired={true}
                                         name={"alamat"}
                                         textarea={true}
                                         placeholder={"Alamat"}

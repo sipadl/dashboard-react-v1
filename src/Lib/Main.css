@@ -127,6 +127,13 @@ word-wrap: break-word
     line-height: 18px;
     word-wrap: break-word;
 }
+
+.main-text {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px;
+    /* font-weight: 600; */
+    line-height: 18px;
+}
 .text-purple {
     text-decoration: none;
     color: #6B4EFF;

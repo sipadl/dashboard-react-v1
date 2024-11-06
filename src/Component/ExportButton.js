@@ -4,7 +4,6 @@ import ico from '../assets/exp.svg';
 export default function ExportButton() {
   return (
     <div style={{
-      width: '100%',
       height: '100%',
       borderRadius: '8px',
       justifyContent: 'center',

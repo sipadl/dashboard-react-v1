@@ -31,8 +31,10 @@ import TambahBiayaBaru from "./Pengaturan/Optional/TambahBiayaBaru";
 import EditBiayaBaru from "./Pengaturan/Optional/EditBiayaBaru";
 import TambahOnboard from "./Onboarding/Detail/TambahOnboard";
 import EditIssuer from "./Issuser/EditIssuer";
+import TambahMdr from "./Pengaturan/Optional/TambahMdr";
 
 export {
+    TambahMdr,
     EditIssuer,
     TambahOnboard,
     EditBiayaBaru,

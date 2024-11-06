@@ -17,7 +17,7 @@ function App() {
             </div>
             <div className="content">
                 <Header />
-                <div className='p-3'>
+                <div className='p-3' style={{minHeight:'88vh'}}>
                 <Route/>
                 </div>
                 <div className='mx-2'>© 2023 AMS. All Rights Reserved.</div>

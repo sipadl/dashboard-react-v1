@@ -24,6 +24,11 @@ export default class Acquiring extends Component {
                     </div>
                 }
                 </td>
+                <td>
+                <a className='m-0 px-1 btn btn-transparent' href="/edit-issuer">
+                    <i className="bx bx-pencil" style={{color: '#979C9E'}}></i>
+                </a>
+                </td>
             </tr>
         ))
         return (
@@ -70,8 +75,8 @@ export default class Acquiring extends Component {
                 </div> */}
                 <div className='p-0 mt-3'>
                     <Table 
-                    th={['ID Merchant', 'Nama Merchant','Tipe Bisnis',
-                        'Nomor Akun','Kode Bank', 'MDR', 'Status'
+                    th={['ID Transaksi','ID Merchant', 'Nama Merchant','Tipe Bisnis',
+                        'Nomor Akun','Kode Bank', 'MDR', 'Status', 'Aksi'
                     ]}
                     data={datas}/>
                 </div>
